@@ -1,0 +1,4 @@
+C:/Users/Arash/Desktop/PCSC2017_Group2/cmake-build-debug/CMakeFiles/PCSC2017_Group2.dir
+C:/Users/Arash/Desktop/PCSC2017_Group2/cmake-build-debug/CMakeFiles/fx.dir
+C:/Users/Arash/Desktop/PCSC2017_Group2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Arash/Desktop/PCSC2017_Group2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
