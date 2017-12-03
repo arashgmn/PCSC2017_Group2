@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pcsc/PCSC2017_Group2/AbstractIntegrator.cpp
+AbstractIntegrator.h
+/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+
+/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+
+/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp
+MonteCarlo_MetropolisAlgorithm.h
+/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
+
+/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
+
+/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp
+MonteCarlo_UniformSampling.h
+/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+stdlib.h
+/home/pcsc/PCSC2017_Group2/stdlib.h
+iostream
+/home/pcsc/PCSC2017_Group2/iostream
+
+/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+AbstractIntegrator.h
+/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+
+/home/pcsc/PCSC2017_Group2/main.cpp
+iostream
+-
+AbstractIntegrator.h
+/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+MonteCarlo_UniformSampling.h
+/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+

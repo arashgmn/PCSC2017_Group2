@@ -1,3 +1,1 @@
-"A:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\PCSC2017_Group2.dir/objects.a
-A:\MinGW\bin\ar.exe cr CMakeFiles\PCSC2017_Group2.dir/objects.a @CMakeFiles\PCSC2017_Group2.dir\objects1.rsp
-A:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\PCSC2017_Group2.dir/objects.a -Wl,--no-whole-archive  -o PCSC2017_Group2.exe -Wl,--out-implib,libPCSC2017_Group2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PCSC2017_Group2.dir\linklibs.rsp
+/usr/bin/c++  -g   CMakeFiles/PCSC2017_Group2.dir/main.cpp.o CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o  -o PCSC2017_Group2 

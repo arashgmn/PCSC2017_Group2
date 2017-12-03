@@ -1,3 +1,1 @@
-"A:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\fx.dir/objects.a
-A:\MinGW\bin\ar.exe cr CMakeFiles\fx.dir/objects.a @CMakeFiles\fx.dir\objects1.rsp
-A:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\fx.dir/objects.a -Wl,--no-whole-archive  -o fx.exe -Wl,--out-implib,libfx.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\fx.dir\linklibs.rsp
+/usr/bin/c++  -g   CMakeFiles/fx.dir/fx.cpp.o  -o fx 
