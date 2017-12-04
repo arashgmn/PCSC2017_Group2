@@ -5,41 +5,41 @@
 		<Option title="PCSC2017_Group2"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\OdeSolver\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug"/>
+				<Option working_dir="/home/golmoham/PCSC2017_Group2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug"/>
+				<Option working_dir="/home/golmoham/PCSC2017_Group2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug"/>
+				<Option working_dir="/home/golmoham/PCSC2017_Group2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fx">
-				<Option output="/home/pcsc/PCSC2017_Group2/cmake-build-debug/fx" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug"/>
+				<Option output="/home/golmoham/PCSC2017_Group2/cmake-build-debug/fx" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/golmoham/PCSC2017_Group2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 fx"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 fx"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fx/fast">
-				<Option output="/home/pcsc/PCSC2017_Group2/cmake-build-debug/fx" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug"/>
+				<Option output="/home/golmoham/PCSC2017_Group2/cmake-build-debug/fx" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/golmoham/PCSC2017_Group2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,15 +77,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 fx/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 fx/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PCSC2017_Group2">
-				<Option output="/home/pcsc/PCSC2017_Group2/cmake-build-debug/PCSC2017_Group2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug"/>
+				<Option output="/home/golmoham/PCSC2017_Group2/cmake-build-debug/PCSC2017_Group2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/golmoham/PCSC2017_Group2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -100,15 +100,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 PCSC2017_Group2"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 PCSC2017_Group2"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PCSC2017_Group2/fast">
-				<Option output="/home/pcsc/PCSC2017_Group2/cmake-build-debug/PCSC2017_Group2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug"/>
+				<Option output="/home/golmoham/PCSC2017_Group2/cmake-build-debug/PCSC2017_Group2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/golmoham/PCSC2017_Group2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -123,117 +123,45 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 PCSC2017_Group2/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ch-07-ex-03-solution">
-				<Option output="/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/ch-07-ex-03-solution" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/pcsc/PCSC2017_Group2/OdeSolver"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 ch-07-ex-03-solution"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ch-07-ex-03-solution/fast">
-				<Option output="/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/ch-07-ex-03-solution" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/pcsc/PCSC2017_Group2/OdeSolver"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 ch-07-ex-03-solution/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 PCSC2017_Group2/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/golmoham/PCSC2017_Group2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/AbstractIntegrator.cpp">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/AbstractIntegrator.cpp">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.h">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.h">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/AbstractOdeSolver.cpp">
-			<Option target="ch-07-ex-03-solution"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/AbstractOdeSolver.hpp">
-			<Option target="ch-07-ex-03-solution"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/ForwardEulerSolver.cpp">
-			<Option target="ch-07-ex-03-solution"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/ForwardEulerSolver.hpp">
-			<Option target="ch-07-ex-03-solution"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/RungeKuttaSolver.cpp">
-			<Option target="ch-07-ex-03-solution"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/RungeKuttaSolver.hpp">
-			<Option target="ch-07-ex-03-solution"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/ch-07-ex-03-solution.cpp">
-			<Option target="ch-07-ex-03-solution"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/constants.h">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/constants.h">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/fx.cpp">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/fx.cpp">
 			<Option target="fx"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/fx.h">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/fx.h">
 			<Option target="fx"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/main.cpp">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/main.cpp">
 			<Option target="PCSC2017_Group2"/>
 		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/CMakeLists.txt">
+		<Unit filename="/home/golmoham/PCSC2017_Group2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/home/pcsc/PCSC2017_Group2/OdeSolver/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\OdeSolver\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

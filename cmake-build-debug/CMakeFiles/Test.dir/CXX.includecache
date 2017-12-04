@@ -13,20 +13,12 @@ AbstractIntegrator.h
 /home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 
 /home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp
-cstdlib
--
 MonteCarlo_MetropolisAlgorithm.h
 /home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
-ctime
--
 
 /home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
-AbstractIntegrator.h
-/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 
 /home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp
-cmath
--
 MonteCarlo_UniformSampling.h
 /home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.h
 stdlib.h
@@ -38,10 +30,18 @@ iostream
 AbstractIntegrator.h
 /home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 
-/home/golmoham/PCSC2017_Group2/main.cpp
+/home/golmoham/PCSC2017_Group2/Test.cpp
+AbstractIntegrator.h
+/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
+MonteCarlo_UniformSampling.h
+/home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+cstdio
+-
 iostream
 -
-cmath
+
+/home/golmoham/PCSC2017_Group2/main.cpp
+iostream
 -
 AbstractIntegrator.h
 /home/golmoham/PCSC2017_Group2/AbstractIntegrator.h

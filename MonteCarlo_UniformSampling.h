@@ -6,7 +6,8 @@
 class MonteCarlo_UniformSampling: public AbstractIntegrator {
 public:
     // Constructor and destructor
-
+    MonteCarlo_UniformSampling();
+    ~MonteCarlo_UniformSampling();
     // other Methods
     double Integrator();
 };

@@ -1,7 +1,4 @@
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/fx.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/PCSC2017_Group2.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/CMakeFiles/edit_cache.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/CMakeFiles/rebuild_cache.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/OdeSolver/CMakeFiles/ch-07-ex-03-solution.dir
+/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles/fx.dir
+/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles/PCSC2017_Group2.dir
