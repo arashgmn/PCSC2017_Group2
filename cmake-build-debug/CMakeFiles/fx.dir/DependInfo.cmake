@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/golmoham/PCSC2017_Group2/fx.cpp" "/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles/fx.dir/fx.cpp.o"
+  "/home/pcsc/PCSC2017_Group2/fx.cpp" "/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/fx.dir/fx.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

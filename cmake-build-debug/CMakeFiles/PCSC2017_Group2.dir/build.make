@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2017.2.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /opt/clion-2017.2.2/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2017.2.1/bin/cmake/bin/cmake -E remove -f
+RM = /opt/clion-2017.2.2/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/golmoham/PCSC2017_Group2
+CMAKE_SOURCE_DIR = /home/pcsc/PCSC2017_Group2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/golmoham/PCSC2017_Group2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pcsc/PCSC2017_Group2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/PCSC2017_Group2.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/PCSC2017_Group2.dir/flags.make
 
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.o: CMakeFiles/PCSC2017_Group2.dir/flags.make
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/main.cpp.o -c /home/golmoham/PCSC2017_Group2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/main.cpp.o -c /home/pcsc/PCSC2017_Group2/main.cpp
 
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCSC2017_Group2.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/golmoham/PCSC2017_Group2/main.cpp > CMakeFiles/PCSC2017_Group2.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pcsc/PCSC2017_Group2/main.cpp > CMakeFiles/PCSC2017_Group2.dir/main.cpp.i
 
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCSC2017_Group2.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/golmoham/PCSC2017_Group2/main.cpp -o CMakeFiles/PCSC2017_Group2.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pcsc/PCSC2017_Group2/main.cpp -o CMakeFiles/PCSC2017_Group2.dir/main.cpp.s
 
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/PCSC2017_Group2.dir/main.cpp.o.provides.build: CMakeFiles/PCSC2017_Gr
 
 CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o: CMakeFiles/PCSC2017_Group2.dir/flags.make
 CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o: ../AbstractIntegrator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o -c /home/golmoham/PCSC2017_Group2/AbstractIntegrator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o -c /home/pcsc/PCSC2017_Group2/AbstractIntegrator.cpp
 
 CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/golmoham/PCSC2017_Group2/AbstractIntegrator.cpp > CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pcsc/PCSC2017_Group2/AbstractIntegrator.cpp > CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.i
 
 CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/golmoham/PCSC2017_Group2/AbstractIntegrator.cpp -o CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pcsc/PCSC2017_Group2/AbstractIntegrator.cpp -o CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.s
 
 CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o: CMakeFiles/PCSC2017_Group2.dir/flags.make
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o: ../MonteCarlo_UniformSampling.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o -c /home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o -c /home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp > CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp > CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.i
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.s
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o.provides.build: 
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o: CMakeFiles/PCSC2017_Group2.dir/flags.make
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o: ../MonteCarlo_MetropolisAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o -c /home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o -c /home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp > CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp > CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.i
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp -o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.s
 
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o.requires:
 
@@ -169,7 +169,7 @@ PCSC2017_Group2: CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o
 PCSC2017_Group2: CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o
 PCSC2017_Group2: CMakeFiles/PCSC2017_Group2.dir/build.make
 PCSC2017_Group2: CMakeFiles/PCSC2017_Group2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable PCSC2017_Group2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable PCSC2017_Group2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PCSC2017_Group2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -189,6 +189,6 @@ CMakeFiles/PCSC2017_Group2.dir/clean:
 .PHONY : CMakeFiles/PCSC2017_Group2.dir/clean
 
 CMakeFiles/PCSC2017_Group2.dir/depend:
-	cd /home/golmoham/PCSC2017_Group2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/golmoham/PCSC2017_Group2 /home/golmoham/PCSC2017_Group2 /home/golmoham/PCSC2017_Group2/cmake-build-debug /home/golmoham/PCSC2017_Group2/cmake-build-debug /home/golmoham/PCSC2017_Group2/cmake-build-debug/CMakeFiles/PCSC2017_Group2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pcsc/PCSC2017_Group2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pcsc/PCSC2017_Group2 /home/pcsc/PCSC2017_Group2 /home/pcsc/PCSC2017_Group2/cmake-build-debug /home/pcsc/PCSC2017_Group2/cmake-build-debug /home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/PCSC2017_Group2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/PCSC2017_Group2.dir/depend
 

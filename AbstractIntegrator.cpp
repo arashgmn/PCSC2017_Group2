@@ -2,6 +2,7 @@
 
 
 // Constructor and destructor
+
 AbstractIntegrator::AbstractIntegrator(){}
 AbstractIntegrator::~AbstractIntegrator(){};
 
@@ -27,8 +28,6 @@ void AbstractIntegrator::SetMoment(const int m) {
     Moment = m;
 }
 
-
-
 // Get Methods
 
 double AbstractIntegrator::GetLowerLimit() const{
@@ -46,7 +45,6 @@ int AbstractIntegrator::GetSamplingNumber() const{
 int AbstractIntegrator::GetMoment() const{
     return Moment;
 }
-
 
 // other Methods
 

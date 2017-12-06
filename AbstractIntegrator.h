@@ -30,7 +30,7 @@ private:
     double UpperLimit;
     double SamplingNumber;
     double (*Function)(double x);
-    int Moment ;
+    int Moment=0;
 };
 
 
