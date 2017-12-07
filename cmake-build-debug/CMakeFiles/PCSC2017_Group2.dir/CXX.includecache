@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/pcsc/PCSC2017_Group2/AbstractIntegrator.cpp
+/home/golmoham/PCSC2017_Group2/AbstractIntegrator.cpp
 AbstractIntegrator.h
-/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 
-/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 
-/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp
+/home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.cpp
 MonteCarlo_MetropolisAlgorithm.h
-/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
+/home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
 cmath
 -
 cstdlib
@@ -22,13 +22,13 @@ cstdlib
 ctime
 -
 
-/home/pcsc/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
+/home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
 AbstractIntegrator.h
-/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 
-/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp
+/home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.cpp
 MonteCarlo_UniformSampling.h
-/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+/home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.h
 cmath
 -
 cstdlib
@@ -36,17 +36,19 @@ cstdlib
 ctime
 -
 
-/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+/home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.h
 AbstractIntegrator.h
-/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 
-/home/pcsc/PCSC2017_Group2/main.cpp
+/home/golmoham/PCSC2017_Group2/main.cpp
 iostream
 -
 cmath
 -
 AbstractIntegrator.h
-/home/pcsc/PCSC2017_Group2/AbstractIntegrator.h
+/home/golmoham/PCSC2017_Group2/AbstractIntegrator.h
 MonteCarlo_UniformSampling.h
-/home/pcsc/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+/home/golmoham/PCSC2017_Group2/MonteCarlo_UniformSampling.h
+MonteCarlo_MetropolisAlgorithm.h
+/home/golmoham/PCSC2017_Group2/MonteCarlo_MetropolisAlgorithm.h
 

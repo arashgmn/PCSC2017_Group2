@@ -13,6 +13,7 @@ CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o: ../MonteCarlo_U
 CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o: ../MonteCarlo_UniformSampling.h
 
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.o: ../AbstractIntegrator.h
+CMakeFiles/PCSC2017_Group2.dir/main.cpp.o: ../MonteCarlo_MetropolisAlgorithm.h
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.o: ../MonteCarlo_UniformSampling.h
 CMakeFiles/PCSC2017_Group2.dir/main.cpp.o: ../main.cpp
 
