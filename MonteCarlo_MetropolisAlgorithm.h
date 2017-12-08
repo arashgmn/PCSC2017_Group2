@@ -9,8 +9,15 @@ public:
     MonteCarlo_MetropolisAlgorithm();
     ~MonteCarlo_MetropolisAlgorithm();
 
+    // Set Methods
+    void SetWeight(double (*w)(double x));
+
     // other Methods
+    double WeightValue(double x) const;
     double Integrator();
+
+private:
+    double (*Weight)(double x);
 };
 
 

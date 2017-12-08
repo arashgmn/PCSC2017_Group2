@@ -5,8 +5,6 @@
 #include <iostream>
 #include <random>
 #include <chrono>
-
-
 using namespace std;
 
 // Constructor and destructor
@@ -14,31 +12,66 @@ using namespace std;
 MonteCarlo_MetropolisAlgorithm::MonteCarlo_MetropolisAlgorithm(){};
 MonteCarlo_MetropolisAlgorithm::~MonteCarlo_MetropolisAlgorithm(){};
 
+// Set Methods
+
+void MonteCarlo_MetropolisAlgorithm::SetWeight(double (*w)(double x)) {
+    Weight = w;
+}
+
+// other Methods
+
+double MonteCarlo_MetropolisAlgorithm::WeightValue(double x) const {
+    return Weight(x);
+}
+
 // Integrator
 
 double MonteCarlo_MetropolisAlgorithm::Integrator() {
     //srand(time(NULL));
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    std::default_random_engine generator (seed);
-    std::uniform_real_distribution<double> distribution(0.0,1.0);
+    std::default_random_engine generator(seed);
+    std::uniform_real_distribution<double> distribution(0.0, 1.0);
 
     double a = GetLowerLimit();
     double b = GetUpperLimit();
     int N = GetSamplingNumber();
     int m = GetMoment();
 
-    int r=0;
+    int r = 0; // number of rejection
     double sum = 0;
-    double p_old, p_new,x_old,x_new;
-    double delta = (b-a)*.5;
+    double p_old, p_new, x_old, x_new;
+    double delta = (b - a) * 0.5;
 
-    int l=10;
-    N= N*l;
+    int l = 10; // for every 10 points we sample once
+    N = N * l;
 
-    x_new = a+(b-a)*distribution(generator);//((double)rand()/RAND_MAX);
-    cout<<x_new;
-    p_new = FunctionValue(x_new)*pow(x_new,m)/(x_new+1)*1.5;
+    x_new = a + (b - a) * distribution(generator);//((double)rand()/RAND_MAX);
+    p_new = (FunctionValue(x_new) / WeightValue(x_new)) * pow(x_new, m);
 
+
+    for (int i = 0; i < N; ++i) {
+
+        x_old = x_new;
+        p_old = p_new;
+
+        x_new = x_old + 2 * (delta) * (distribution(generator) - 0.5);
+        if (x_new > b) { x_new = b - (x_new - b); }
+        if (x_new < a) { x_new = a + (a - x_new); }
+        p_new = (FunctionValue(x_new) / WeightValue(x_new)) * pow(x_new, m);
+
+        if (distribution(generator) > WeightValue(x_new) / WeightValue(x_old)) {     //rejection happens
+            x_new = x_old;
+            p_new = p_old;
+            r++;
+        }
+
+        if (i % l == 0) {
+            sum = sum + p_new;
+        }
+    }
+    cout << "rejection: " << (double) r / N * 100 << " %" << endl;
+    return sum / (N / l) * (b - a);
+}
 /*
     int N_c=N/100;
     double *x = new double[N_c];
@@ -84,32 +117,8 @@ double MonteCarlo_MetropolisAlgorithm::Integrator() {
         }
     }
 
-
-
-
 */
 
-
-    for (int i = 0; i < N; ++i){
-
-        x_old = x_new;
-        p_old = p_new;
-
-        x_new = x_old + 2*(delta)*(distribution(generator) - 0.5);
-        if (x_new>b){ x_new = b -(x_new-b);}
-        if (x_new<a){ x_new = a +(a-x_new);}
-        p_new = FunctionValue(x_new)*pow(x_new,m)/(x_new+1)*1.5;
-
-        if (distribution(generator) > fabs((1+x_new)/(1+x_old))) {     //rejection happens
-            //حواستمون باشه که p_old ممکنه صفر بشه. باید یه cerr بذاریم
-            x_new = x_old;
-            p_new = p_old;
-            r++;
-        }
-
-        if (i%l==0){
-            sum = sum +p_new;
-        }
         /*
         if (i%100==0){
             if ((double) r/N*100)<0.3){
@@ -118,8 +127,3 @@ double MonteCarlo_MetropolisAlgorithm::Integrator() {
             else()
         }
          */
-    }
-
-    cout<<"\n"<<(double) r/N*100<<endl;
-    return sum/N*(b-a)*l;
-}
