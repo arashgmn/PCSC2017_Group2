@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/PCSC2017_Group2.dir/main.cpp.o CMakeFiles/PCSC2017_Group2.dir/AbstractIntegrator.cpp.o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_UniformSampling.cpp.o CMakeFiles/PCSC2017_Group2.dir/MonteCarlo_MetropolisAlgorithm.cpp.o  -o PCSC2017_Group2 

@@ -1,4 +1,0 @@
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/fx.dir
-/home/pcsc/PCSC2017_Group2/cmake-build-debug/CMakeFiles/PCSC2017_Group2.dir
