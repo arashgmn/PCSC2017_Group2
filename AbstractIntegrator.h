@@ -1,6 +1,7 @@
 #ifndef PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 #define PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 
+
 /*! \brief Brief description.
  *         Brief description continued.
  *
@@ -19,12 +20,14 @@ public:
     void SetSamplingNumber(const int N);
     void SetFunction(double (*f)(double x));
     void SetMoment(const int m);
+    void SetError (double err);
 
     // Get Methods
     double GetLowerLimit() const;
     double GetUpperLimit() const;
     int GetSamplingNumber() const;
     int GetMoment() const;
+    double GetError() const;
 
     // other Methods
     double FunctionValue(double x) const;
@@ -35,6 +38,7 @@ private:
     double UpperLimit;
     double SamplingNumber;
     double (*Function)(double x);
+    double error;
     int Moment=0;
 };
 

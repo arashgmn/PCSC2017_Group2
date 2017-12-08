@@ -28,6 +28,10 @@ void AbstractIntegrator::SetMoment(const int m) {
     Moment = m;
 }
 
+void AbstractIntegrator::SetError (const double err) {
+    error = err;
+}
+
 // Get Methods
 
 double AbstractIntegrator::GetLowerLimit() const{
@@ -44,6 +48,10 @@ int AbstractIntegrator::GetSamplingNumber() const{
 
 int AbstractIntegrator::GetMoment() const{
     return Moment;
+}
+
+double AbstractIntegrator::GetError() const{
+    return error;
 }
 
 // other Methods

@@ -27,26 +27,32 @@ double MonteCarlo_MetropolisAlgorithm::WeightValue(double x) const {
 // Integrator
 
 double MonteCarlo_MetropolisAlgorithm::Integrator() {
-    //srand(time(NULL));
+
+    //random
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
     std::uniform_real_distribution<double> distribution(0.0, 1.0);
 
+    //Getting integral arguments
     double a = GetLowerLimit();
     double b = GetUpperLimit();
     int N = GetSamplingNumber();
     int m = GetMoment();
 
-    int r = 0; // number of rejection
-    double sum = 0;
-    double p_old, p_new, x_old, x_new;
-    double delta = (b - a) * 0.5;
+    //parameters of integration
+    int r = 0;                          // number of rejection
+    double sum = 0;                     //sum of samples
+    double sum2 = 0;                    //sum^2 of samples
+    double p_old, p_new, x_old, x_new;  //Marcov chain parameters
+    double delta = (b - a) * 0.5;       //move in x
 
-    int l = 10; // for every 10 points we sample once
-    N = N * l;
+    //correlation length in Marcov chain
+    int l = 10;                         // for every "l" points we sample once
+    N = N * l;                          //Updated N
 
-    x_new = a + (b - a) * distribution(generator);//((double)rand()/RAND_MAX);
-    p_new = (FunctionValue(x_new) / WeightValue(x_new)) * pow(x_new, m);
+    //Start point
+    x_new = a + (b - a) * distribution(generator);                          //a random variable in domain
+    p_new = (FunctionValue(x_new) / WeightValue(x_new)) * pow(x_new, m);    //prob. of going to new x
 
 
     for (int i = 0; i < N; ++i) {
@@ -54,23 +60,34 @@ double MonteCarlo_MetropolisAlgorithm::Integrator() {
         x_old = x_new;
         p_old = p_new;
 
-        x_new = x_old + 2 * (delta) * (distribution(generator) - 0.5);
-        if (x_new > b) { x_new = b - (x_new - b); }
-        if (x_new < a) { x_new = a + (a - x_new); }
-        p_new = (FunctionValue(x_new) / WeightValue(x_new)) * pow(x_new, m);
+        x_new = x_old + 2 * (delta) * (distribution(generator) - 0.5);          //moving x
+        if (x_new > b) { x_new = b - (x_new - b); }                             //right border correction
+        if (x_new < a) { x_new = a + (a - x_new); }                             //left border correction
+        p_new = (FunctionValue(x_new) / WeightValue(x_new)) * pow(x_new, m);    //prob. of going to new x
 
+        //checking Metropolis condition
         if (distribution(generator) > WeightValue(x_new) / WeightValue(x_old)) {     //rejection happens
             x_new = x_old;
             p_new = p_old;
             r++;
         }
 
+        //sampling
         if (i % l == 0) {
             sum = sum + p_new;
+            sum2 += p_new*p_new;
         }
     }
+
+    //Computing error
+    sum = sum / (N/l) ;
+    sum2 = sum2 / (N/l) ;
+    double err = sqrt( (sum2-sum*sum) / (N/l) ) * (b-a);
+    SetError(err);
+
     cout << "rejection: " << (double) r / N * 100 << " %" << endl;
-    return sum / (N / l) * (b - a);
+    cout<<"error of MC is "<<GetError()*100<<"%"<<endl;
+    return sum * (b - a);
 }
 /*
     int N_c=N/100;
