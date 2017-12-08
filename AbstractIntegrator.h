@@ -1,6 +1,11 @@
 #ifndef PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 #define PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 
+/*! \brief Brief description.
+ *         Brief description continued.
+ *
+ *  Detailed description starts here.
+ */
 
 class AbstractIntegrator {
 public:
