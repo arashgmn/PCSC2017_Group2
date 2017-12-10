@@ -33,14 +33,19 @@ int main() {
     J.SetFunction(f);
     J.SetWeight(w);
     //J.SetMoment(1);
-    double Ians=I.Integrator();
-    double Jans=J.Integrator();
+    double* Ians;
+    double* Jans;
+    Ians = I.Integrator();
+    Jans = J.Integrator();
 
 
-    std::cout << "Result of US: " <<Ians<< std::endl;
-    std::cout << "Result of MC: " <<Jans<< std::endl;
+    std::cout << "Result of US: " <<Ians[0]<< std::endl;
+    std::cout << "Result of MC: " <<Jans[0]<< std::endl;
 
-    std::cout << "True Error of US: " <<(Ians - ExactValue)*100 <<"%"<< std::endl;
-    std::cout << "True Error of MC: " <<(Jans - ExactValue)*100 <<"%"<< std::endl;
+    std::cout << "Error of US: " <<Ians[1]<< std::endl;
+    std::cout << "Error of MC: " <<Jans[1]<< std::endl;
+
+    std::cout << "True Error of US: " <<(Ians[0] - ExactValue)<<std::endl;
+    std::cout << "True Error of MC: " <<(Jans[0] - ExactValue)<< std::endl;
     return 0;
 }

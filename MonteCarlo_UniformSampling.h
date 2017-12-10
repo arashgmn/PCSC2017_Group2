@@ -3,14 +3,21 @@
 
 #include "AbstractIntegrator.h"
 
+/*!	\class MonteCarlo_UniformSampling
+	\brief Brief description about the class.
+	Brief description continued.
+
+	Detailed description starts here. (after one empty line)
+*/
+
 class MonteCarlo_UniformSampling: public AbstractIntegrator {
 public:
     // Constructor and destructor
-    MonteCarlo_UniformSampling();
-    ~MonteCarlo_UniformSampling();
+    MonteCarlo_UniformSampling(); //!< Constructor
+    ~MonteCarlo_UniformSampling(); //!< Destructor
 
     // other Methods
-    double Integrator();
+    double* Integrator();
 };
 
 

@@ -1,0 +1,231 @@
+\hypertarget{class_abstract_integrator}{}\section{Abstract\+Integrator Class Reference}
+\label{class_abstract_integrator}\index{Abstract\+Integrator@{Abstract\+Integrator}}
+
+
+An abstract class for setting the general inputs of an integral.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Integrator.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Integrator\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_abstract_integrator_aa88168bae2057a179c9ecc2ba9639f61}{Abstract\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_abstract_integrator_addc528450d3f1d6e5d2cbd81e7d545e0}{$\sim$\+Abstract\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_integrator_aea1949bda48ee6f4501475e8da26aaeb}{Set\+Lower\+Limit} (const double a)
+\begin{DoxyCompactList}\small\item\em A method for setting the lower limit of integral by the user. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_integrator_a341070bf2dca9e2ac113d388e6d06556}{Set\+Upper\+Limit} (const double b)
+\begin{DoxyCompactList}\small\item\em A method for setting the upper limit of integral by the user. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_integrator_a48c0b007c4b18e4a229f014bb0ccf9c0}{Set\+Sampling\+Number} (const int N)
+\begin{DoxyCompactList}\small\item\em A method for setting the number of sampling in Monte-\/\+Carlo integration by the user. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_integrator_a9350f10f351d5b58c6aa8e581325ff4f}{Set\+Function} (double($\ast$\hyperlink{main_8cpp_a3de2b7b41a8e4b07da05298510d17ed2}{f})(double x))
+\begin{DoxyCompactList}\small\item\em A method for setting the function by the user. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_integrator_a871fa27363ee09b98c964ccaa33da100}{Set\+Moment} (const int m)
+\begin{DoxyCompactList}\small\item\em A method for setting the function by the user. \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_integrator_ae27a09d1e3fb0a30ce9545a4d8f29cad}{Get\+Lower\+Limit} () const
+\item 
+double \hyperlink{class_abstract_integrator_a864fe7dc9aa1ff0b36da0b8f361a5b69}{Get\+Upper\+Limit} () const
+\item 
+int \hyperlink{class_abstract_integrator_ac58629ec6822b3beeefdd1323b627704}{Get\+Sampling\+Number} () const
+\item 
+int \hyperlink{class_abstract_integrator_a7f709ab302dfe70b5f0f2ce80456fcdb}{Get\+Moment} () const
+\item 
+double \hyperlink{class_abstract_integrator_a6262731b81f3ad7e984ba354b4601356}{Function\+Value} (double x) const
+\begin{DoxyCompactList}\small\item\em This method returns the value of function at the given input value (x) \end{DoxyCompactList}\item 
+virtual double $\ast$ \hyperlink{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}{Integrator} ()=0
+\begin{DoxyCompactList}\small\item\em pure virtual method \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract class for setting the general inputs of an integral. 
+
+This class doesn\textquotesingle{}t include any numerical method for calculating the integral, rather, it has some methods used for setting the general inputs of an integral by the user and contains some members storing these inputs, which are used by numerical methods in the derived classes. 
+
+Definition at line 12 of file Abstract\+Integrator.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_abstract_integrator_aa88168bae2057a179c9ecc2ba9639f61}\label{class_abstract_integrator_aa88168bae2057a179c9ecc2ba9639f61}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Abstract\+Integrator@{Abstract\+Integrator}}
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Abstract\+Integrator()}{AbstractIntegrator()}}
+{\footnotesize\ttfamily Abstract\+Integrator\+::\+Abstract\+Integrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+Definition at line 6 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_addc528450d3f1d6e5d2cbd81e7d545e0}\label{class_abstract_integrator_addc528450d3f1d6e5d2cbd81e7d545e0}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!````~Abstract\+Integrator@{$\sim$\+Abstract\+Integrator}}
+\index{````~Abstract\+Integrator@{$\sim$\+Abstract\+Integrator}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{$\sim$\+Abstract\+Integrator()}{~AbstractIntegrator()}}
+{\footnotesize\ttfamily Abstract\+Integrator\+::$\sim$\+Abstract\+Integrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line 7 of file Abstract\+Integrator.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abstract_integrator_a6262731b81f3ad7e984ba354b4601356}\label{class_abstract_integrator_a6262731b81f3ad7e984ba354b4601356}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Function\+Value@{Function\+Value}}
+\index{Function\+Value@{Function\+Value}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Function\+Value()}{FunctionValue()}}
+{\footnotesize\ttfamily double Abstract\+Integrator\+::\+Function\+Value (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption}) const}
+
+
+
+This method returns the value of function at the given input value (x) 
+
+
+
+Definition at line 51 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_ae27a09d1e3fb0a30ce9545a4d8f29cad}\label{class_abstract_integrator_ae27a09d1e3fb0a30ce9545a4d8f29cad}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Lower\+Limit@{Get\+Lower\+Limit}}
+\index{Get\+Lower\+Limit@{Get\+Lower\+Limit}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Get\+Lower\+Limit()}{GetLowerLimit()}}
+{\footnotesize\ttfamily double Abstract\+Integrator\+::\+Get\+Lower\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 33 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_a7f709ab302dfe70b5f0f2ce80456fcdb}\label{class_abstract_integrator_a7f709ab302dfe70b5f0f2ce80456fcdb}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Moment@{Get\+Moment}}
+\index{Get\+Moment@{Get\+Moment}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Get\+Moment()}{GetMoment()}}
+{\footnotesize\ttfamily int Abstract\+Integrator\+::\+Get\+Moment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 45 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_ac58629ec6822b3beeefdd1323b627704}\label{class_abstract_integrator_ac58629ec6822b3beeefdd1323b627704}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Sampling\+Number@{Get\+Sampling\+Number}}
+\index{Get\+Sampling\+Number@{Get\+Sampling\+Number}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Get\+Sampling\+Number()}{GetSamplingNumber()}}
+{\footnotesize\ttfamily int Abstract\+Integrator\+::\+Get\+Sampling\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 41 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_a864fe7dc9aa1ff0b36da0b8f361a5b69}\label{class_abstract_integrator_a864fe7dc9aa1ff0b36da0b8f361a5b69}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Upper\+Limit@{Get\+Upper\+Limit}}
+\index{Get\+Upper\+Limit@{Get\+Upper\+Limit}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Get\+Upper\+Limit()}{GetUpperLimit()}}
+{\footnotesize\ttfamily double Abstract\+Integrator\+::\+Get\+Upper\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 37 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}\label{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Integrator@{Integrator}}
+\index{Integrator@{Integrator}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Integrator()}{Integrator()}}
+{\footnotesize\ttfamily virtual double$\ast$ Abstract\+Integrator\+::\+Integrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+pure virtual method 
+
+in the derived classes, this method is overridden for implementing numerical algorithms 
+
+Implemented in \hyperlink{class_monte_carlo___metropolis_algorithm_a93fba72a50330bf184156e23158992b2}{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}, and \hyperlink{class_monte_carlo___uniform_sampling_a1920387a9f817c8179531fa02f7c00d3}{Monte\+Carlo\+\_\+\+Uniform\+Sampling}.
+
+\mbox{\Hypertarget{class_abstract_integrator_a9350f10f351d5b58c6aa8e581325ff4f}\label{class_abstract_integrator_a9350f10f351d5b58c6aa8e581325ff4f}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Function@{Set\+Function}}
+\index{Set\+Function@{Set\+Function}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Set\+Function()}{SetFunction()}}
+{\footnotesize\ttfamily void Abstract\+Integrator\+::\+Set\+Function (\begin{DoxyParamCaption}\item[{double($\ast$)(double x)}]{f }\end{DoxyParamCaption})}
+
+
+
+A method for setting the function by the user. 
+
+
+
+Definition at line 23 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_aea1949bda48ee6f4501475e8da26aaeb}\label{class_abstract_integrator_aea1949bda48ee6f4501475e8da26aaeb}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Lower\+Limit@{Set\+Lower\+Limit}}
+\index{Set\+Lower\+Limit@{Set\+Lower\+Limit}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Set\+Lower\+Limit()}{SetLowerLimit()}}
+{\footnotesize\ttfamily void Abstract\+Integrator\+::\+Set\+Lower\+Limit (\begin{DoxyParamCaption}\item[{const double}]{a }\end{DoxyParamCaption})}
+
+
+
+A method for setting the lower limit of integral by the user. 
+
+
+
+Definition at line 11 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_a871fa27363ee09b98c964ccaa33da100}\label{class_abstract_integrator_a871fa27363ee09b98c964ccaa33da100}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Moment@{Set\+Moment}}
+\index{Set\+Moment@{Set\+Moment}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Set\+Moment()}{SetMoment()}}
+{\footnotesize\ttfamily void Abstract\+Integrator\+::\+Set\+Moment (\begin{DoxyParamCaption}\item[{const int}]{m }\end{DoxyParamCaption})}
+
+
+
+A method for setting the function by the user. 
+
+as the default value of Moment is 0, user may not call it 
+
+Definition at line 27 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_a48c0b007c4b18e4a229f014bb0ccf9c0}\label{class_abstract_integrator_a48c0b007c4b18e4a229f014bb0ccf9c0}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Sampling\+Number@{Set\+Sampling\+Number}}
+\index{Set\+Sampling\+Number@{Set\+Sampling\+Number}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Set\+Sampling\+Number()}{SetSamplingNumber()}}
+{\footnotesize\ttfamily void Abstract\+Integrator\+::\+Set\+Sampling\+Number (\begin{DoxyParamCaption}\item[{const int}]{N }\end{DoxyParamCaption})}
+
+
+
+A method for setting the number of sampling in Monte-\/\+Carlo integration by the user. 
+
+
+
+Definition at line 19 of file Abstract\+Integrator.\+cpp.
+
+\mbox{\Hypertarget{class_abstract_integrator_a341070bf2dca9e2ac113d388e6d06556}\label{class_abstract_integrator_a341070bf2dca9e2ac113d388e6d06556}} 
+\index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Upper\+Limit@{Set\+Upper\+Limit}}
+\index{Set\+Upper\+Limit@{Set\+Upper\+Limit}!Abstract\+Integrator@{Abstract\+Integrator}}
+\subsubsection{\texorpdfstring{Set\+Upper\+Limit()}{SetUpperLimit()}}
+{\footnotesize\ttfamily void Abstract\+Integrator\+::\+Set\+Upper\+Limit (\begin{DoxyParamCaption}\item[{const double}]{b }\end{DoxyParamCaption})}
+
+
+
+A method for setting the upper limit of integral by the user. 
+
+
+
+Definition at line 15 of file Abstract\+Integrator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pcsc/\+P\+C\+S\+C2017\+\_\+\+Group2/\hyperlink{_abstract_integrator_8h}{Abstract\+Integrator.\+h}\item 
+/home/pcsc/\+P\+C\+S\+C2017\+\_\+\+Group2/\hyperlink{_abstract_integrator_8cpp}{Abstract\+Integrator.\+cpp}\end{DoxyCompactItemize}

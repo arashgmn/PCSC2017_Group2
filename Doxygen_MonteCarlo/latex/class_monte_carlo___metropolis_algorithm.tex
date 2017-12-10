@@ -1,0 +1,127 @@
+\hypertarget{class_monte_carlo___metropolis_algorithm}{}\section{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm Class Reference}
+\label{class_monte_carlo___metropolis_algorithm}\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+
+
+Brief description about the class. Brief description continued.  
+
+
+
+
+{\ttfamily \#include $<$Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+h$>$}
+
+
+
+Inheritance diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:
+% FIG 0
+
+
+Collaboration diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_monte_carlo___metropolis_algorithm_a80995ad029b056ca675c751c247426a5}{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_monte_carlo___metropolis_algorithm_aecedd40f8c0098bc66d455ef06814981}{$\sim$\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_monte_carlo___metropolis_algorithm_a46da0258439fd525ff6c93a4571c08dd}{Set\+Weight} (double($\ast$\hyperlink{main_8cpp_a6f95c347c46d0a26fc68408b470a98df}{w})(double x))
+\begin{DoxyCompactList}\small\item\em A method for setting the weight function by the user. \end{DoxyCompactList}\item 
+double \hyperlink{class_monte_carlo___metropolis_algorithm_a5295f6e5691292d833da48105b13ece4}{Weight\+Value} (double x) const
+\begin{DoxyCompactList}\small\item\em This method returns the value of weight function at the given input value (x) \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{class_monte_carlo___metropolis_algorithm_a93fba72a50330bf184156e23158992b2}{Integrator} ()
+\begin{DoxyCompactList}\small\item\em pure virtual method \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Brief description about the class. Brief description continued. 
+
+Detailed description starts here. (after one empty line) 
+
+Definition at line 13 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_a80995ad029b056ca675c751c247426a5}\label{class_monte_carlo___metropolis_algorithm_a80995ad029b056ca675c751c247426a5}} 
+\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+\subsubsection{\texorpdfstring{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm()}{MonteCarlo\_MetropolisAlgorithm()}}
+{\footnotesize\ttfamily Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+::\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+Definition at line 12 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_aecedd40f8c0098bc66d455ef06814981}\label{class_monte_carlo___metropolis_algorithm_aecedd40f8c0098bc66d455ef06814981}} 
+\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!````~Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{$\sim$\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+\index{````~Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{$\sim$\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+\subsubsection{\texorpdfstring{$\sim$\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm()}{~MonteCarlo\_MetropolisAlgorithm()}}
+{\footnotesize\ttfamily Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+::$\sim$\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+Definition at line 13 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_a93fba72a50330bf184156e23158992b2}\label{class_monte_carlo___metropolis_algorithm_a93fba72a50330bf184156e23158992b2}} 
+\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Integrator@{Integrator}}
+\index{Integrator@{Integrator}!Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+\subsubsection{\texorpdfstring{Integrator()}{Integrator()}}
+{\footnotesize\ttfamily double $\ast$ Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+::\+Integrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+pure virtual method 
+
+in the derived classes, this method is overridden for implementing numerical algorithms 
+
+Implements \hyperlink{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}{Abstract\+Integrator}.
+
+
+
+Definition at line 29 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_a46da0258439fd525ff6c93a4571c08dd}\label{class_monte_carlo___metropolis_algorithm_a46da0258439fd525ff6c93a4571c08dd}} 
+\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Set\+Weight@{Set\+Weight}}
+\index{Set\+Weight@{Set\+Weight}!Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+\subsubsection{\texorpdfstring{Set\+Weight()}{SetWeight()}}
+{\footnotesize\ttfamily void Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+::\+Set\+Weight (\begin{DoxyParamCaption}\item[{double($\ast$)(double x)}]{w }\end{DoxyParamCaption})}
+
+
+
+A method for setting the weight function by the user. 
+
+
+
+Definition at line 17 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_a5295f6e5691292d833da48105b13ece4}\label{class_monte_carlo___metropolis_algorithm_a5295f6e5691292d833da48105b13ece4}} 
+\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Weight\+Value@{Weight\+Value}}
+\index{Weight\+Value@{Weight\+Value}!Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
+\subsubsection{\texorpdfstring{Weight\+Value()}{WeightValue()}}
+{\footnotesize\ttfamily double Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+::\+Weight\+Value (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption}) const}
+
+
+
+This method returns the value of weight function at the given input value (x) 
+
+
+
+Definition at line 23 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pcsc/\+P\+C\+S\+C2017\+\_\+\+Group2/\hyperlink{_monte_carlo___metropolis_algorithm_8h}{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+h}\item 
+/home/pcsc/\+P\+C\+S\+C2017\+\_\+\+Group2/\hyperlink{_monte_carlo___metropolis_algorithm_8cpp}{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp}\end{DoxyCompactItemize}
