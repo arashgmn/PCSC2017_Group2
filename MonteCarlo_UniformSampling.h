@@ -4,10 +4,10 @@
 #include "AbstractIntegrator.h"
 
 /*!	\class MonteCarlo_UniformSampling
-	\brief Brief description about the class.
-	Brief description continued.
+	\brief This class integrates a function using uniform sampling.
 
-	Detailed description starts here. (after one empty line)
+	In this method there is no need for weight function. Integral and the error would be evaluated directly.
+    The output is an array "ans" such that ans[0] is the integral answer and ans[1] is the estimated error.
 */
 
 class MonteCarlo_UniformSampling: public AbstractIntegrator {
@@ -17,7 +17,7 @@ public:
     ~MonteCarlo_UniformSampling(); //!< Destructor
 
     // other Methods
-    double* Integrator();
+    double* Integrator(); //!< Integrating using Uniform Sampling method
 };
 
 

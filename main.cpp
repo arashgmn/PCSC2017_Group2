@@ -13,7 +13,9 @@ double f(double x)
 
 double w(double x)
 {
-    return (4-2*x)/3;
+    //return cos (x);
+    //return (4-2*x)/3;
+    return exp(-x*x);
 }
 
 int main() {
@@ -31,7 +33,7 @@ int main() {
     J.SetUpperLimit(1);
     J.SetSamplingNumber(10000);
     J.SetFunction(f);
-    J.SetWeight(w);
+    J.SetWeight(w,0);
     //J.SetMoment(1);
     double* Ians;
     double* Jans;

@@ -2,12 +2,11 @@
 
 
 // Constructor and destructor
-
 AbstractIntegrator::AbstractIntegrator(){}
 AbstractIntegrator::~AbstractIntegrator(){};
 
-// Set Methods
 
+// Set Methods
 void AbstractIntegrator::SetLowerLimit(const double a) {
     LowerLimit = a;
 }
@@ -28,8 +27,9 @@ void AbstractIntegrator::SetMoment(const int m) {
     Moment = m;
 }
 
-// Get Methods
 
+
+// Get Methods
 double AbstractIntegrator::GetLowerLimit() const{
     return LowerLimit;
 }
@@ -46,8 +46,9 @@ int AbstractIntegrator::GetMoment() const{
     return Moment;
 }
 
-// other Methods
 
+
+// other Methods
 double AbstractIntegrator::FunctionValue(double x) const{
     return Function(x);
 }

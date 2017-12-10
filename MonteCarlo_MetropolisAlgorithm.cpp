@@ -1,4 +1,5 @@
 #include "MonteCarlo_MetropolisAlgorithm.h"
+#include "MonteCarlo_UniformSampling.h"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
@@ -8,24 +9,24 @@
 using namespace std;
 
 // Constructor and destructor
-
 MonteCarlo_MetropolisAlgorithm::MonteCarlo_MetropolisAlgorithm(){};
 MonteCarlo_MetropolisAlgorithm::~MonteCarlo_MetropolisAlgorithm(){};
 
-// Set Methods
 
-void MonteCarlo_MetropolisAlgorithm::SetWeight(double (*w)(double x)) {
+// Set Methods
+void MonteCarlo_MetropolisAlgorithm::SetWeight(double (*w)(double x),bool flag=0) {
     Weight = w;
+    Flag = flag;
 }
 
-// other Methods
 
+// other Methods
 double MonteCarlo_MetropolisAlgorithm::WeightValue(double x) const {
     return Weight(x);
 }
 
-// Integrator
 
+// Integrator
 double* MonteCarlo_MetropolisAlgorithm::Integrator() {
 
     // for generating random numbers
@@ -45,10 +46,25 @@ double* MonteCarlo_MetropolisAlgorithm::Integrator() {
     double sum2 = 0;                    // sum of squares
     double p_old, p_new, x_old, x_new;  // Markov chain parameters
     double delta = (b - a) * 0.5;       // move in x
+    double Integral_W,Err_W;                  //Integral of weight function on domain (Flag==0)
+
 
     // correlation length in Markov chain
     int l = 10;                         // for every "l" points we sample once
     N = N * l;                          // update N
+
+    //Computing integral of W via UniformSampling
+    if (Flag==0){
+        MonteCarlo_UniformSampling W;
+        W.SetLowerLimit(a);
+        W.SetUpperLimit(b);
+        W.SetSamplingNumber(10*N);          //Note that it is not the original N, but it's 10*l*N. (10 is arbitrary chosen.)
+        W.SetFunction(Weight);
+        W.SetMoment(0);                     //We compute zero-th moment of weight function
+        Integral_W = W.Integrator()[0];     //Integral of W
+        Err_W = W.Integrator()[1];          //Error in normalizing
+    }
+
 
     // start point
     x_new = a + (b - a) * distribution(generator);                          // a random variable in domain
@@ -82,12 +98,22 @@ double* MonteCarlo_MetropolisAlgorithm::Integrator() {
     // evaluating error
     sum = sum / (N/l) ;
     sum2 = sum2 / (N/l) ;
-    double err = sqrt( (sum2-sum*sum) / (N/l) ) * (b-a);
+    double err = sqrt( (sum2-sum*sum) / (N/l) ) ;   //err= std_var / sqrt(N)
 
-    cout << "rejection: " << (double) r / N * 100 << " %" << endl;
+
+    cout<<"error without compensating "<< err * (b-a) <<"\n";   //Should be removed...
+
+    //relative errors will add up
+    if (Flag==0){
+        err =  (err/sum + Err_W/Integral_W)  * sum;
+        sum *= Integral_W;
+    }
+
+    cout << "rejection: " << (double) r / N * 100 << " %" << endl;      //likely to be removed
+
     // returning the value of integral and its error
     double *ans = new double[2];
     ans[0] = sum * (b-a);
-    ans[1] = err;
+    ans[1] = err * (b-a);
     return ans;
 }
