@@ -8,7 +8,7 @@ using namespace std;
 
 double f(double x)
 {
-    return 4/(1+pow(x,2));
+    return exp(-x*x);
 }
 
 double w(double x)
@@ -20,14 +20,14 @@ double w(double x)
 
 int main() {
     double ExactValue = M_PI;
-
+/*
     MonteCarlo_UniformSampling I;
     I.SetLowerLimit(0);
     I.SetUpperLimit(1);
     I.SetSamplingNumber(10000);
     I.SetFunction(f);
     //I.SetMoment(1);
-
+*/
     MonteCarlo_MetropolisAlgorithm J;
     J.SetLowerLimit(0);
     J.SetUpperLimit(1);
@@ -37,7 +37,7 @@ int main() {
     //J.SetMoment(1);
     double* Ians;
     double* Jans;
-    Ians = I.Integrator();
+    //Ians = I.Integrator();
     Jans = J.Integrator();
 
 

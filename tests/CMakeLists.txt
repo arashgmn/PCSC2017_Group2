@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 3.8)
-project(PCSC2017_Group2)
-
 set(CMAKE_CXX_STANDARD 11)
-set(SOURCE_FILES Errors.cpp Errors.h StatisticalMoments.cpp StatisticalMoments.h)
+include_directories(${CMAKE_SOURCE_DIR})
 
-add_executable(PCSC2017_Group2/tests ${SOURCE_FILES})
+set(TEST_Source ../AbstractIntegrator.cpp ../AbstractIntegrator.h ../MonteCarlo_UniformSampling.cpp ../MonteCarlo_UniformSampling.h ../MonteCarlo_MetropolisAlgorithm.cpp ../MonteCarlo_MetropolisAlgorithm.h )
+
+add_executable(CentralLimitTheory CentralLimitTheory.cpp ${TEST_Source})
+add_executable(Errors Errors.cpp ${TEST_Source})
+add_executable(StatisticalMoments StatisticalMoments.cpp ${TEST_Source})

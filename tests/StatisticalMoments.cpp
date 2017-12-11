@@ -16,14 +16,14 @@ using namespace std;
 double f(double x) { return 1/sqrt(2*M_PI)*exp(-x*x/2); }
 double w(double x) { return (-fabs(x)+10)/100; }
 
-void StatMoment(){
+int main(){
     double ExactValue = M_PI;
-    double US, MP, US_error, MP_error;
+    double *US, *MP;
 
     ofstream USfile;
     ofstream MPfile;
-    USfile.open ("StatMoment_file_US.txt");
-    MPfile.open ("StatMoment_file_US.txt");
+    USfile.open ("StatMoment_file_US.txt",std::ios::app);
+    MPfile.open ("StatMoment_file_US.txt",std::ios::app);
 
     USfile<< "m    Integral    Error\n";
     MPfile<< "m    Integral    Error\n";
@@ -48,14 +48,12 @@ void StatMoment(){
         I.SetMoment(m);
         J.SetMoment(m);
 
-        MP=J.Integrator()[0];
-        MP_error=J.Integrator()[1];
+        MP =J.Integrator();
+        US=I.Integrator();
 
-        US=I.Integrator()[0];
-        US_error=I.Integrator()[1];
+        USfile<<m<<"\t"<<US[0]<<"\t"<<US[1]<<"\t"<<US[0]-ExactValue<<"\n";
+        MPfile<<m<<"\t"<<MP[0]<<"\t"<<MP[1]<<"\t"<<MP[0]-ExactValue<<"\n";
 
-        USfile<<m<<"\t"<<US<<"\t"<<US_error<<"\t"<<US-ExactValue<<"\n";
-        MPfile<<m<<"\t"<<MP<<"\t"<<MP_error<<"\t"<<MP-ExactValue<<"\n";
 
     }
 
