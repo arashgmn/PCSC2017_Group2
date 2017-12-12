@@ -1,6 +1,8 @@
 #ifndef PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 #define PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 
+#include <iostream>
+
 /*!	\class AbstractIntegrator
 	\brief An abstract class for setting the general inputs of an integral
 
@@ -18,6 +20,8 @@ public:
     // Set Methods
     void SetLowerLimit(const double a); //!< A method for setting the lower limit of integral by the user
     void SetUpperLimit(const double b); //!< A method for setting the upper limit of integral by the user
+    void SetLowerLimit(const std::string& a);   //!< A method for setting the upper limit of integral to -Inf
+    void SetUpperLimit(const std::string& b);   //!< A method for setting the upper limit of integral to +Inf
     void SetSamplingNumber(const int N); //!< A method for setting the number of sampling in Monte-Carlo integration by the user
     void SetFunction(double (*f)(double x)); //!< A method for setting the function by the user
     void SetMoment(const int m); //!< A method for setting the function by the user
