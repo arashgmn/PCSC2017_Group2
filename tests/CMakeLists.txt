@@ -6,3 +6,4 @@ set(TEST_Source ../AbstractIntegrator.cpp ../AbstractIntegrator.h ../MonteCarlo_
 add_executable(CentralLimitTheory CentralLimitTheory.cpp ${TEST_Source})
 add_executable(Errors Errors.cpp ${TEST_Source})
 add_executable(StatisticalMoments StatisticalMoments.cpp ${TEST_Source})
+add_executable(Test Test.cpp ${TEST_Source})

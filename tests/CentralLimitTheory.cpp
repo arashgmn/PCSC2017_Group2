@@ -1,16 +1,10 @@
-//
-// Created by Arash on 12/10/2017.
-//
-
 #include <iostream>
 #include <cmath>
 #include <fstream>
 #include "../MonteCarlo_UniformSampling.h"
-
 using namespace std;
 
 double f(double x) { return 4 / (1 + pow(x, 2)); }
-
 
 int main(){
 
@@ -48,8 +42,6 @@ int main(){
         US2=J.Integrator();
         mu2 += US2[0];
         sigma2 += US2[0]*US2[0];
-
-
 
         CL<< US1[0]<<"\t"<<US1[1]<<"\t"<<US2[0]<<"\t"<<US2[1]<<"\n";
     }

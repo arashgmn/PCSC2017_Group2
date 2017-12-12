@@ -3,7 +3,7 @@
 #include "AbstractIntegrator.h"
 #include "MonteCarlo_UniformSampling.h"
 #include "MonteCarlo_MetropolisAlgorithm.h"
-# define M_PI           3.14159265358979323846  /* pi */
+#define M_PI           3.14159265358979323846  /* pi */
 using namespace std;
 
 double f(double x)

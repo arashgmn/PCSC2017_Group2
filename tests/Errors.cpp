@@ -1,15 +1,9 @@
-//
-// Created by Arash on 12/10/2017.
-//
-
 #include <iostream>
 #include <cmath>
 #include <fstream>
-
 #include "../MonteCarlo_UniformSampling.h"
 #include "../MonteCarlo_MetropolisAlgorithm.h"
-
-# define M_PI  3.14159265358979323846  /* pi */
+#define M_PI  3.14159265358979323846  /* pi */
 using namespace std;
 
 double f(double x) { return 4/(1+pow(x,2)); }
@@ -40,7 +34,7 @@ int main(){
         I.SetFunction(f);
         J.SetSamplingNumber(n);
         J.SetFunction(f);
-        J.SetWeight(w,1);
+        J.SetWeight(w,true);
 
         MP =J.Integrator();
         US=I.Integrator();
