@@ -14,7 +14,7 @@ double f(double x) { return 4 / (1 + pow(x, 2)); }
 
 int main(){
 
-    int M=1000;
+    int M=100000;
 
     MonteCarlo_UniformSampling I;
     I.SetLowerLimit(0);
