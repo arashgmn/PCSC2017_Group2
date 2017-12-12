@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 #include <fstream>
 #include "../MonteCarlo_UniformSampling.h"
@@ -48,7 +49,7 @@ int main() {
 
     double *I_Pi_ans, *J_Pi_ans;
     double *I_Gaussian_ans, *J_Gaussian_ans;
-    double *I_Gamma4_ans, *J_Gamma4_ans;
+    double *I_Gamma4_ans;
 
     I_Pi_ans = I_Pi.Integrator();
     J_Pi_ans = J_Pi.Integrator();
@@ -57,15 +58,19 @@ int main() {
     I_Gamma4_ans = I_Gamma4.Integrator();
 
     double ExactValue_Pi = M_PI;
-    double ExactValue_Gaussian = 1;
+    double ExactValue_Gaussian = 1/2;
     double ExactValue_Gamma4 = 6;
 
-    std::cout << "************* Integral of Pi on [0,1] *************"<<std::endl;
-    std::cout << "Uniform Sampling: "<<I_Pi_ans[0]<<"\t True Error: "<<std::endl;
-    std::cout << "Metropolis Algorithm: "<<J_Pi_ans[0]<< std::endl;
+    std::cout << "************* Integral of Pi on [0,1] ******************"<<std::endl;
+    std::cout << setw(22) << "Uniform Sampling: "<<I_Pi_ans[0]<<"\t True Error: "<<I_Pi_ans[0]-ExactValue_Pi<<std::endl;
+    std::cout << setw(22) << "Metropolis Algorithm: "<<J_Pi_ans[0]<<"\t True Error: "<<J_Pi_ans[0]-ExactValue_Pi<<std::endl;
     std::cout << "\n";
-    std::cout << "************* Integral of Gaussian on [0,1] *******"<<std::endl;
-
+    std::cout << "************* Integral of Gaussian on [0,Inf) **********"<<std::endl;
+    std::cout << setw(22) << "Uniform Sampling: "<<I_Gaussian_ans[0]<<"\t True Error: "<<I_Gaussian_ans[0]-ExactValue_Gaussian<<std::endl;
+    std::cout << setw(22) << "Metropolis Algorithm: "<<J_Gaussian_ans[0]<<"\t True Error: "<<J_Gaussian_ans[0]-ExactValue_Gaussian<<std::endl;
+    std::cout << "\n";
+    std::cout << "************* Integral of Gamma4 on [0,Inf) ************"<<std::endl;
+    std::cout << setw(22) << "Uniform Sampling: "<<I_Gamma4_ans[0]<<"\t True Error: "<<I_Gamma4_ans[0]-ExactValue_Gamma4<<std::endl;
     std::cout << "\n";
     return 0;
 }
