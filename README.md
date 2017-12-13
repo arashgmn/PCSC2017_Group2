@@ -36,5 +36,7 @@ Finally, the method below, will return an array which contains the value of the 
 
 List of fuatures
 
-This program is able to integrate R to R functions inside a domain
+1. Integrating R to R functions inside a bounded domain using Uniform Sampling and Importance Sampling (using Metropolis procedure)
+2. Computing
+
 
