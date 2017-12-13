@@ -37,6 +37,27 @@ Finally, the method below, will return an array which contains the value of the 
 List of fuatures
 
 1. Integrating R to R functions inside a bounded domain using Uniform Sampling and Importance Sampling (using Metropolis procedure)
-2. Computing
+2. Computing different statistical moments of a function (integer or non-integer)
+3. Normalizing weight function if needed only by taking a flag
+4. Estimating error of integration
+5. Integration in unbounded domain (should by used with caution, not recommended for all functions)
+6. Being able to increase the accuracy by taking more samples as user's wish
+
+
+List of tests
+
+We have tested program under the following benchmarks:
+1. Computing Pi=3.14159...
+2. Computing normal distribution integral
+3. Computing gamma-function for z=4
+4. Evaluating error and comparing them with true error for all integrals above
+5. Computing even-moments of normal distribution up to 10
+
+
+To-dos and prespective
+
+The program can be extended to cover the following:
+
+1. being able to compute integrals from R^n to R
 
 
