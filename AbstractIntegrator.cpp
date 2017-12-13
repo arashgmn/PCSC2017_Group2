@@ -18,7 +18,7 @@ void AbstractIntegrator::SetLowerLimit(const std::string& a){
         //c error
     }
     else{
-        LowerLimit = std::numeric_limits<int>::min();
+        LowerLimit = std::numeric_limits<int>::min()/2;
     }
 }
 
@@ -32,7 +32,7 @@ void AbstractIntegrator::SetUpperLimit(const std::string& b){
         //c error
     }
     else{
-        LowerLimit = std::numeric_limits<int>::max();
+        UpperLimit = std::numeric_limits<int>::max()/2;
     }
 }
 
