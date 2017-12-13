@@ -1,8 +1,6 @@
 #ifndef PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 #define PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H
 
-#include <iostream>
-#include <random>
 
 /*!	\class AbstractIntegrator
 	\brief An abstract class for setting the general inputs of an integral
@@ -26,15 +24,20 @@ public:
     void SetMoment(const int m); //!< A method for setting the function by the user
     /*!< as the default value of Moment is 0, user may not call it */
 
-    // "Inf Methods" NOT RECOMMENDED!
-    //void SetLowerLimit(const std::string& a);   //!< A method for setting the upper limit of integral to -Inf
+    /* For calculating integrals with infinite limits, we created two methods with string inputs so that the user could use "Inf" or "-Inf" as infinite limits indicators.
+     * However, we do NOT RECOMMENDED these methods. --- for more information, please refer to README.md*/
+    //void SetLowerLimit(const std::string& a);   //!< A method for setting the lower limit of integral to -Inf
     //void SetUpperLimit(const std::string& b);   //!< A method for setting the upper limit of integral to +Inf
 
     // Get Methods
-    double GetLowerLimit() const;
-    double GetUpperLimit() const;
-    int GetSamplingNumber() const;
-    int GetMoment() const;
+    double GetLowerLimit() const; //!< A method for getting the lower limit of integral
+    /*!< This method is mainly used in some methods of derived classes, but it can also be called by the user.*/
+    double GetUpperLimit() const; //!< A method for getting the upper limit of integral
+    /*!< This method is mainly used in some methods of derived classes, but it can also be called by the user.*/
+    int GetSamplingNumber() const; //!< A method for getting the number of sampling
+    /*!< This method is mainly used in some methods of derived classes, but it can also be called by the user.*/
+    int GetMoment() const; //!< A method for getting the moment
+    /*!< This method is mainly used in some methods of derived classes, but it can also be called by the user.*/
 
     // other Methods
     double FunctionValue(double x) const; //!< This method returns the value of function at the given input value (x)
@@ -45,7 +48,7 @@ private:
     double LowerLimit; //!< A private member, storing the lower limit of integral
     double UpperLimit; //!< A private member, storing the upper limit of integral
     int SamplingNumber; //!< A private member, storing the number of sampling in Monte-Carlo integration
-    double (*Function)(double x);
+    double (*Function)(double x); //!< A private member, storing the function
     int Moment = 0; /*!< the default value of Moment is 0 */
 };
 #endif //PCSC2017_GROUP2_ABSTRACTINTEGRATOR_H

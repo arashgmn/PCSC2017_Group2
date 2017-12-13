@@ -1,4 +1,5 @@
 #include <limits>
+#include <iostream>
 #include "AbstractIntegrator.h"
 
 
@@ -12,6 +13,7 @@ void AbstractIntegrator::SetLowerLimit(const double a) {
     LowerLimit = a;
 }
 
+/*
 void AbstractIntegrator::SetLowerLimit(const std::string& a){
     if (a!="-Inf"){
         std::cout<<"Bad input!"<<std::endl;
@@ -21,11 +23,13 @@ void AbstractIntegrator::SetLowerLimit(const std::string& a){
         LowerLimit = std::numeric_limits<int>::min()/2;
     }
 }
+*/
 
 void AbstractIntegrator::SetUpperLimit(const double b) {
     UpperLimit = b;
 }
 
+/*
 void AbstractIntegrator::SetUpperLimit(const std::string& b){
     if (b!="Inf"){
         std::cout<<"Bad input!"<<std::endl;
@@ -35,6 +39,7 @@ void AbstractIntegrator::SetUpperLimit(const std::string& b){
         UpperLimit = std::numeric_limits<int>::max()/2;
     }
 }
+*/
 
 void AbstractIntegrator::SetSamplingNumber(const int N) {
     SamplingNumber = N;
@@ -47,7 +52,6 @@ void AbstractIntegrator::SetFunction(double (*f)(double x)) {
 void AbstractIntegrator::SetMoment(const int m) {
     Moment = m;
 }
-
 
 
 // Get Methods
@@ -66,7 +70,6 @@ int AbstractIntegrator::GetSamplingNumber() const{
 int AbstractIntegrator::GetMoment() const{
     return Moment;
 }
-
 
 
 // other Methods

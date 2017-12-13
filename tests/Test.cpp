@@ -11,7 +11,7 @@ double Gaussian (double x) { return exp(-x*x/2)/sqrt(2*M_PI); }
 double Gamma4 (double x) { return pow(x,-1)*exp(-x); }
 
 double w_Pi (double x) { return (4-2*x)/3;} // a normalized weight in [0,1]
-double w_Gaussian (double x) { return exp(-1*x);} // a normalized weight in [0,Inf)
+double w_Gaussian (double x) { return exp(-x);} // a normalized weight in [0,Inf)
 
 int main() {
     MonteCarlo_UniformSampling I_Pi;
@@ -26,8 +26,8 @@ int main() {
     J_Pi.SetLowerLimit(0);
     I_Pi.SetUpperLimit(1);
     J_Pi.SetUpperLimit(1);
-    I_Pi.SetSamplingNumber(10000);
-    J_Pi.SetSamplingNumber(10000);
+    I_Pi.SetSamplingNumber(80000);
+    J_Pi.SetSamplingNumber(80000);
     I_Pi.SetFunction(Pi);
     J_Pi.SetFunction(Pi);
     J_Pi.SetWeight(w_Pi,true);
@@ -35,18 +35,18 @@ int main() {
     //Gaussian setting
     I_Gaussian.SetLowerLimit(0);
     J_Gaussian.SetLowerLimit(0);
-    I_Gaussian.SetUpperLimit("Inf");           //IT'S NOT INF
-    J_Gaussian.SetUpperLimit("Inf");           //IT'S NOT INF
-    I_Gaussian.SetSamplingNumber(10000);  //IT'S LARGE
-    J_Gaussian.SetSamplingNumber(10000);  //IT'S LARGE
+    I_Gaussian.SetUpperLimit(7);
+    J_Gaussian.SetUpperLimit(7);
+    I_Gaussian.SetSamplingNumber(80000);
+    J_Gaussian.SetSamplingNumber(80000);
     I_Gaussian.SetFunction(Gaussian);
     J_Gaussian.SetFunction(Gaussian);
-    J_Gaussian.SetWeight(w_Gaussian, false);
+    J_Gaussian.SetWeight(w_Gaussian,false);
 
     //Gamma setting
     I_Gamma4.SetLowerLimit(0);
-    I_Gamma4.SetUpperLimit(1);
-    I_Gamma4.SetSamplingNumber(10000);
+    I_Gamma4.SetUpperLimit(20);
+    I_Gamma4.SetSamplingNumber(80000);
     I_Gamma4.SetFunction(Gamma4);
     I_Gamma4.SetMoment(4);
 
@@ -68,14 +68,12 @@ int main() {
     std::cout << setw(22) << "Uniform Sampling: "<<I_Pi_ans[0]<<"\t True Error: "<<I_Pi_ans[0]-ExactValue_Pi<<std::endl;
     std::cout << setw(22) << "Metropolis Algorithm: "<<J_Pi_ans[0]<<"\t True Error: "<<J_Pi_ans[0]-ExactValue_Pi<<std::endl;
     std::cout << "\n";
-    std::cout << "************* Integral of Gaussian on [0,Inf) **********"<<std::endl;
+    std::cout << "************* Integral of Gaussian on [0,7] ***********"<<std::endl;
     std::cout << setw(22) << "Uniform Sampling: "<<I_Gaussian_ans[0]<<"\t True Error: "<<I_Gaussian_ans[0]-ExactValue_Gaussian<<std::endl;
     std::cout << setw(22) << "Metropolis Algorithm: "<<J_Gaussian_ans[0]<<"\t True Error: "<<J_Gaussian_ans[0]-ExactValue_Gaussian<<std::endl;
     std::cout << "\n";
-    std::cout << "************* Integral of Gamma4 on [0,Inf) ************"<<std::endl;
+    std::cout << "************* Integral of Gamma4 on [0,20] ************"<<std::endl;
     std::cout << setw(22) << "Uniform Sampling: "<<I_Gamma4_ans[0]<<"\t True Error: "<<I_Gamma4_ans[0]-ExactValue_Gamma4<<std::endl;
     std::cout << "\n";
     return 0;
 }
-
-

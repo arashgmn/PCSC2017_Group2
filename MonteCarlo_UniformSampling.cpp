@@ -1,10 +1,9 @@
-#include "MonteCarlo_UniformSampling.h"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
 #include <random>
 #include <chrono>
-#include <iostream>
+#include "MonteCarlo_UniformSampling.h"
 
 using namespace std;
 
@@ -37,8 +36,6 @@ double* MonteCarlo_UniformSampling::Integrator() {
     for (int i = 1; i <= N; ++i){
         x = a + (b-a) * distribution(generator);
         y = FunctionValue(x) * pow(x,m);
-        //cout<<x<<"\t"<<y<<endl;
-        //system("pause");
         sum = sum + y;
         sum2 = sum2 + y*y;
     }
