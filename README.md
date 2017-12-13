@@ -40,8 +40,9 @@ List of fuatures
 2. Computing different statistical moments of a function (integer or non-integer)
 3. Normalizing weight function if needed only by taking a flag
 4. Estimating error of integration
-5. Integration in unbounded domain (should by used with caution, not recommended for all functions)
-6. Being able to increase the accuracy by taking more samples as user's wish
+5. Being able to increase the accuracy by taking more samples as user's wish
+Integration in unbounded domain (should by used with caution, not recommended for all functions)
+6. 
 
 
 List of tests
@@ -56,8 +57,10 @@ We have tested program under the following benchmarks:
 
 To-dos and prespective
 
-The program can be extended to cover the following:
+The program can be extended to cover the following objectives:
 
-1. being able to compute integrals from R^n to R
+1. Integrals from R^n to R
+2. Integral in unbounded domain. {We've already provided such feature. Yet, we decided to comment it for the following reason. Using Monte Carlo algorithm on unbounded domain, is only possible with improtance sampling (Metropolis) method. For using Metropolis, one should provide a suitable weight function considering the mathematical behavior of the original function. Also ot's crutial to choose a  good starting point to be able to span most of the subsets that contribute the most in the value of integral. These considerations can not be implemented without preknowledge about shape of the function. In most cases, though, considering sufficient large upper and lower limit will give a reasonable answer.}
+3. Active (self-corrector) step-size for Metropolis method
 
 
