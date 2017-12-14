@@ -37,13 +37,13 @@ void \hyperlink{class_abstract_integrator_a9350f10f351d5b58c6aa8e581325ff4f}{Set
 void \hyperlink{class_abstract_integrator_a871fa27363ee09b98c964ccaa33da100}{Set\+Moment} (const int m)
 \begin{DoxyCompactList}\small\item\em A method for setting the function by the user. \end{DoxyCompactList}\item 
 double \hyperlink{class_abstract_integrator_ae27a09d1e3fb0a30ce9545a4d8f29cad}{Get\+Lower\+Limit} () const
-\item 
+\begin{DoxyCompactList}\small\item\em A method for getting the lower limit of integral. \end{DoxyCompactList}\item 
 double \hyperlink{class_abstract_integrator_a864fe7dc9aa1ff0b36da0b8f361a5b69}{Get\+Upper\+Limit} () const
-\item 
+\begin{DoxyCompactList}\small\item\em A method for getting the upper limit of integral. \end{DoxyCompactList}\item 
 int \hyperlink{class_abstract_integrator_ac58629ec6822b3beeefdd1323b627704}{Get\+Sampling\+Number} () const
-\item 
+\begin{DoxyCompactList}\small\item\em A method for getting the number of sampling. \end{DoxyCompactList}\item 
 int \hyperlink{class_abstract_integrator_a7f709ab302dfe70b5f0f2ce80456fcdb}{Get\+Moment} () const
-\item 
+\begin{DoxyCompactList}\small\item\em A method for getting the moment. \end{DoxyCompactList}\item 
 double \hyperlink{class_abstract_integrator_a6262731b81f3ad7e984ba354b4601356}{Function\+Value} (double x) const
 \begin{DoxyCompactList}\small\item\em This method returns the value of function at the given input value (x) \end{DoxyCompactList}\item 
 virtual double $\ast$ \hyperlink{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}{Integrator} ()=0
@@ -55,7 +55,7 @@ An abstract class for setting the general inputs of an integral.
 
 This class doesn\textquotesingle{}t include any numerical method for calculating the integral, rather, it has some methods used for setting the general inputs of an integral by the user and contains some members storing these inputs, which are used by numerical methods in the derived classes. 
 
-Definition at line 12 of file Abstract\+Integrator.\+h.
+Definition at line 13 of file Abstract\+Integrator.\+h.
 
 
 
@@ -72,7 +72,7 @@ Constructor.
 
 
 
-Definition at line 5 of file Abstract\+Integrator.\+cpp.
+Definition at line 7 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_addc528450d3f1d6e5d2cbd81e7d545e0}\label{class_abstract_integrator_addc528450d3f1d6e5d2cbd81e7d545e0}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!````~Abstract\+Integrator@{$\sim$\+Abstract\+Integrator}}
@@ -86,7 +86,7 @@ Destructor.
 
 
 
-Definition at line 6 of file Abstract\+Integrator.\+cpp.
+Definition at line 8 of file Abstract\+Integrator.\+cpp.
 
 
 
@@ -103,7 +103,7 @@ This method returns the value of function at the given input value (x)
 
 
 
-Definition at line 52 of file Abstract\+Integrator.\+cpp.
+Definition at line 76 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_ae27a09d1e3fb0a30ce9545a4d8f29cad}\label{class_abstract_integrator_ae27a09d1e3fb0a30ce9545a4d8f29cad}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Lower\+Limit@{Get\+Lower\+Limit}}
@@ -113,7 +113,11 @@ Definition at line 52 of file Abstract\+Integrator.\+cpp.
 
 
 
-Definition at line 33 of file Abstract\+Integrator.\+cpp.
+A method for getting the lower limit of integral. 
+
+This method is mainly used in some methods of derived classes, but it can also be called by the user. 
+
+Definition at line 58 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_a7f709ab302dfe70b5f0f2ce80456fcdb}\label{class_abstract_integrator_a7f709ab302dfe70b5f0f2ce80456fcdb}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Moment@{Get\+Moment}}
@@ -123,7 +127,11 @@ Definition at line 33 of file Abstract\+Integrator.\+cpp.
 
 
 
-Definition at line 45 of file Abstract\+Integrator.\+cpp.
+A method for getting the moment. 
+
+This method is mainly used in some methods of derived classes, but it can also be called by the user. 
+
+Definition at line 70 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_ac58629ec6822b3beeefdd1323b627704}\label{class_abstract_integrator_ac58629ec6822b3beeefdd1323b627704}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Sampling\+Number@{Get\+Sampling\+Number}}
@@ -133,7 +141,11 @@ Definition at line 45 of file Abstract\+Integrator.\+cpp.
 
 
 
-Definition at line 41 of file Abstract\+Integrator.\+cpp.
+A method for getting the number of sampling. 
+
+This method is mainly used in some methods of derived classes, but it can also be called by the user. 
+
+Definition at line 66 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_a864fe7dc9aa1ff0b36da0b8f361a5b69}\label{class_abstract_integrator_a864fe7dc9aa1ff0b36da0b8f361a5b69}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Get\+Upper\+Limit@{Get\+Upper\+Limit}}
@@ -143,7 +155,11 @@ Definition at line 41 of file Abstract\+Integrator.\+cpp.
 
 
 
-Definition at line 37 of file Abstract\+Integrator.\+cpp.
+A method for getting the upper limit of integral. 
+
+This method is mainly used in some methods of derived classes, but it can also be called by the user. 
+
+Definition at line 62 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}\label{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Integrator@{Integrator}}
@@ -171,7 +187,7 @@ A method for setting the function by the user.
 
 
 
-Definition at line 22 of file Abstract\+Integrator.\+cpp.
+Definition at line 48 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_aea1949bda48ee6f4501475e8da26aaeb}\label{class_abstract_integrator_aea1949bda48ee6f4501475e8da26aaeb}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Lower\+Limit@{Set\+Lower\+Limit}}
@@ -185,7 +201,7 @@ A method for setting the lower limit of integral by the user.
 
 
 
-Definition at line 10 of file Abstract\+Integrator.\+cpp.
+Definition at line 12 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_a871fa27363ee09b98c964ccaa33da100}\label{class_abstract_integrator_a871fa27363ee09b98c964ccaa33da100}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Moment@{Set\+Moment}}
@@ -199,7 +215,7 @@ A method for setting the function by the user.
 
 as the default value of Moment is 0, user may not call it 
 
-Definition at line 26 of file Abstract\+Integrator.\+cpp.
+Definition at line 52 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_a48c0b007c4b18e4a229f014bb0ccf9c0}\label{class_abstract_integrator_a48c0b007c4b18e4a229f014bb0ccf9c0}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Sampling\+Number@{Set\+Sampling\+Number}}
@@ -213,7 +229,7 @@ A method for setting the number of sampling in Monte-\/\+Carlo integration by th
 
 
 
-Definition at line 18 of file Abstract\+Integrator.\+cpp.
+Definition at line 44 of file Abstract\+Integrator.\+cpp.
 
 \mbox{\Hypertarget{class_abstract_integrator_a341070bf2dca9e2ac113d388e6d06556}\label{class_abstract_integrator_a341070bf2dca9e2ac113d388e6d06556}} 
 \index{Abstract\+Integrator@{Abstract\+Integrator}!Set\+Upper\+Limit@{Set\+Upper\+Limit}}
@@ -227,7 +243,7 @@ A method for setting the upper limit of integral by the user.
 
 
 
-Definition at line 14 of file Abstract\+Integrator.\+cpp.
+Definition at line 28 of file Abstract\+Integrator.\+cpp.
 
 
 

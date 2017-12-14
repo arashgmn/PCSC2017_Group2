@@ -11,7 +11,7 @@ double Gaussian (double x) { return exp(-x*x/2)/sqrt(2*M_PI); }
 double Gamma4 (double x) { return pow(x,-1)*exp(-x); }
 
 double w_Pi (double x) { return (4-2*x)/3;} // a normalized weight in [0,1]
-double w_Gaussian (double x) { return exp(-x);} // a normalized weight in [0,Inf)
+double w_Gaussian (double x) { return exp(-x);} // a non-normalized weight in [0,7]
 
 int main() {
     MonteCarlo_UniformSampling I_Pi;
@@ -43,7 +43,7 @@ int main() {
     J_Gaussian.SetFunction(Gaussian);
     J_Gaussian.SetWeight(w_Gaussian,false);
 
-    //Gamma setting
+    //Gamma4 setting
     I_Gamma4.SetLowerLimit(0);
     I_Gamma4.SetUpperLimit(20);
     I_Gamma4.SetSamplingNumber(80000);

@@ -2,7 +2,7 @@
 \label{class_monte_carlo___metropolis_algorithm}\index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
 
 
-This class integrates a function using Metropolis sampling Brief description continued.  
+This class integrates a function using Metropolis sampling.  
 
 
 
@@ -11,8 +11,7 @@ This class integrates a function using Metropolis sampling Brief description con
 
 
 
-Inheritance diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:
-\nopagebreak
+Inheritance diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:
 \end{figure}
 
 
-Collaboration diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:
-\nopagebreak
+Collaboration diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,19 +35,19 @@ Collaboration diagram for Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+:
 \hyperlink{class_monte_carlo___metropolis_algorithm_aecedd40f8c0098bc66d455ef06814981}{$\sim$\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 void \hyperlink{class_monte_carlo___metropolis_algorithm_ac19d55a838561eaecea3ea519de7e091}{Set\+Weight} (double($\ast$\hyperlink{main_8cpp_a6f95c347c46d0a26fc68408b470a98df}{w})(double x), bool flag)
-\begin{DoxyCompactList}\small\item\em A method for setting the weight function by the user, flag=1 if the function is normalized. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A method for setting the weight function by the user, flag=true if the function is normalized. \end{DoxyCompactList}\item 
 double \hyperlink{class_monte_carlo___metropolis_algorithm_a5295f6e5691292d833da48105b13ece4}{Weight\+Value} (double x) const
 \begin{DoxyCompactList}\small\item\em This method returns the value of weight function at the given input value (x) \end{DoxyCompactList}\item 
 double $\ast$ \hyperlink{class_monte_carlo___metropolis_algorithm_a93fba72a50330bf184156e23158992b2}{Integrator} ()
-\begin{DoxyCompactList}\small\item\em pure virtual method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Integrating using Metropolis Algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This class integrates a function using Metropolis sampling Brief description continued. 
+This class integrates a function using Metropolis sampling. 
 
 In this method user must provide a strictly positive weight function on domain of integration. If the weight function is normalized, this method will perform integration and evaluates the error. If it is not the case, weight function will be normalized by integrating weight function on domain using Uniform Sampling class. The evaluation of error will consider the probable error in normalizing the weight function. The output is an array \char`\"{}ans\char`\"{} such that ans\mbox{[}0\mbox{]} is the integral answer and ans\mbox{[}1\mbox{]} is the estimated error. 
 
-Definition at line 19 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+h.
+Definition at line 16 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+h.
 
 
 
@@ -66,7 +64,7 @@ Constructor.
 
 
 
-Definition at line 12 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+Definition at line 13 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
 
 \mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_aecedd40f8c0098bc66d455ef06814981}\label{class_monte_carlo___metropolis_algorithm_aecedd40f8c0098bc66d455ef06814981}} 
 \index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!````~Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{$\sim$\+Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
@@ -80,7 +78,7 @@ Destructor.
 
 
 
-Definition at line 13 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+Definition at line 14 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
 
 
 
@@ -93,29 +91,29 @@ Definition at line 13 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
 
 
 
-pure virtual method 
+Integrating using Metropolis Algorithm. 
 
-in the derived classes, this method is overridden for implementing numerical algorithms 
+
 
 Implements \hyperlink{class_abstract_integrator_a073d8f87239f732b3d2832070caa3b17}{Abstract\+Integrator}.
 
 
 
-Definition at line 30 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+Definition at line 32 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
 
 \mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_ac19d55a838561eaecea3ea519de7e091}\label{class_monte_carlo___metropolis_algorithm_ac19d55a838561eaecea3ea519de7e091}} 
 \index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Set\+Weight@{Set\+Weight}}
 \index{Set\+Weight@{Set\+Weight}!Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}}
 \subsubsection{\texorpdfstring{Set\+Weight()}{SetWeight()}}
-{\footnotesize\ttfamily void Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+::\+Set\+Weight (\begin{DoxyParamCaption}\item[{double($\ast$)(double x)}]{w,  }\item[{bool}]{flag = {\ttfamily 0} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Monte\+Carlo\+\_\+\+Metropolis\+Algorithm\+::\+Set\+Weight (\begin{DoxyParamCaption}\item[{double($\ast$)(double x)}]{w,  }\item[{bool}]{flag = {\ttfamily false} }\end{DoxyParamCaption})}
 
 
 
-A method for setting the weight function by the user, flag=1 if the function is normalized. 
+A method for setting the weight function by the user, flag=true if the function is normalized. 
 
+the default Flag has been set false, so if the user doesn\textquotesingle{}t know whether his weight function is normalized or not, he can leave the second argument 
 
-
-Definition at line 17 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+Definition at line 18 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
 
 \mbox{\Hypertarget{class_monte_carlo___metropolis_algorithm_a5295f6e5691292d833da48105b13ece4}\label{class_monte_carlo___metropolis_algorithm_a5295f6e5691292d833da48105b13ece4}} 
 \index{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm@{Monte\+Carlo\+\_\+\+Metropolis\+Algorithm}!Weight\+Value@{Weight\+Value}}
@@ -129,7 +127,7 @@ This method returns the value of weight function at the given input value (x)
 
 
 
-Definition at line 24 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
+Definition at line 25 of file Monte\+Carlo\+\_\+\+Metropolis\+Algorithm.\+cpp.
 
 
 

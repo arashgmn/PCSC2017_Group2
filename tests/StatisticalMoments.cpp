@@ -3,7 +3,6 @@
 #include <fstream>
 #include "../MonteCarlo_UniformSampling.h"
 #include "../MonteCarlo_MetropolisAlgorithm.h"
-#define M_PI           3.14159265358979323846  /* pi */
 using namespace std;
 
 double f(double x) { return 1/sqrt(2*M_PI)*exp(-x*x/2); }
@@ -21,7 +20,6 @@ int main(){
     USfile<< "m    Integral    Error\n";
     MPfile<< "m    Integral    Error\n";
 
-
     MonteCarlo_UniformSampling I;
     MonteCarlo_MetropolisAlgorithm J;
     I.SetLowerLimit(-10);
@@ -35,7 +33,6 @@ int main(){
     J.SetFunction(f);
     J.SetWeight(w,true);
 
-
     for (int m=0;m<=10;m+=2){
 
         I.SetMoment(m);
@@ -46,10 +43,9 @@ int main(){
 
         USfile<<m<<"\t"<<US[0]<<"\t"<<US[1]<<"\t"<<US[0]-ExactValue<<"\n";
         MPfile<<m<<"\t"<<MP[0]<<"\t"<<MP[1]<<"\t"<<MP[0]-ExactValue<<"\n";
-
-
     }
 
     USfile.close();
     MPfile.close();
+    return 0;
 }

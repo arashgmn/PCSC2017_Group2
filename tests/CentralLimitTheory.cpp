@@ -55,4 +55,5 @@ int main(){
     CL<< "#2. sigma and mu are "<<sigma2<<"\t"<<mu2<<"\n";
 
     CL.close();
+    return 0;
 }

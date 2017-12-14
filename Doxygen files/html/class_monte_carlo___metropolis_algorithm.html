@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Monte Carlo: MonteCarlo_MetropolisAlgorithm Class Reference</title>
+<title>MonteCarlo: MonteCarlo_MetropolisAlgorithm Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Monte Carlo
+   <div id="projectname">MonteCarlo
    </div>
   </td>
  </tr>
@@ -66,7 +66,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This class integrates a function using Metropolis sampling Brief description continued.  
+<p>This class integrates a function using Metropolis sampling.  
  <a href="class_monte_carlo___metropolis_algorithm.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_monte_carlo___metropolis_algorithm_8h_source.html">MonteCarlo_MetropolisAlgorithm.h</a>&gt;</code></p>
@@ -96,13 +96,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aecedd40f8c0098bc66d455ef06814981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#aecedd40f8c0098bc66d455ef06814981">More...</a><br /></td></tr>
 <tr class="separator:aecedd40f8c0098bc66d455ef06814981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac19d55a838561eaecea3ea519de7e091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monte_carlo___metropolis_algorithm.html#ac19d55a838561eaecea3ea519de7e091">SetWeight</a> (double(*<a class="el" href="main_8cpp.html#a6f95c347c46d0a26fc68408b470a98df">w</a>)(double x), bool flag)</td></tr>
-<tr class="memdesc:ac19d55a838561eaecea3ea519de7e091"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for setting the weight function by the user, flag=1 if the function is normalized.  <a href="#ac19d55a838561eaecea3ea519de7e091">More...</a><br /></td></tr>
+<tr class="memdesc:ac19d55a838561eaecea3ea519de7e091"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for setting the weight function by the user, flag=true if the function is normalized.  <a href="#ac19d55a838561eaecea3ea519de7e091">More...</a><br /></td></tr>
 <tr class="separator:ac19d55a838561eaecea3ea519de7e091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5295f6e5691292d833da48105b13ece4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monte_carlo___metropolis_algorithm.html#a5295f6e5691292d833da48105b13ece4">WeightValue</a> (double x) const</td></tr>
 <tr class="memdesc:a5295f6e5691292d833da48105b13ece4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the value of weight function at the given input value (x)  <a href="#a5295f6e5691292d833da48105b13ece4">More...</a><br /></td></tr>
 <tr class="separator:a5295f6e5691292d833da48105b13ece4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93fba72a50330bf184156e23158992b2"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monte_carlo___metropolis_algorithm.html#a93fba72a50330bf184156e23158992b2">Integrator</a> ()</td></tr>
-<tr class="memdesc:a93fba72a50330bf184156e23158992b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virtual method  <a href="#a93fba72a50330bf184156e23158992b2">More...</a><br /></td></tr>
+<tr class="memdesc:a93fba72a50330bf184156e23158992b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrating using Metropolis Algorithm.  <a href="#a93fba72a50330bf184156e23158992b2">More...</a><br /></td></tr>
 <tr class="separator:a93fba72a50330bf184156e23158992b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_abstract_integrator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_integrator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_abstract_integrator.html">AbstractIntegrator</a></td></tr>
 <tr class="memitem:aa88168bae2057a179c9ecc2ba9639f61 inherit pub_methods_class_abstract_integrator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_integrator.html#aa88168bae2057a179c9ecc2ba9639f61">AbstractIntegrator</a> ()</td></tr>
@@ -127,22 +127,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a871fa27363ee09b98c964ccaa33da100 inherit pub_methods_class_abstract_integrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for setting the function by the user.  <a href="class_abstract_integrator.html#a871fa27363ee09b98c964ccaa33da100">More...</a><br /></td></tr>
 <tr class="separator:a871fa27363ee09b98c964ccaa33da100 inherit pub_methods_class_abstract_integrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae27a09d1e3fb0a30ce9545a4d8f29cad inherit pub_methods_class_abstract_integrator"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_integrator.html#ae27a09d1e3fb0a30ce9545a4d8f29cad">GetLowerLimit</a> () const</td></tr>
+<tr class="memdesc:ae27a09d1e3fb0a30ce9545a4d8f29cad inherit pub_methods_class_abstract_integrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for getting the lower limit of integral.  <a href="class_abstract_integrator.html#ae27a09d1e3fb0a30ce9545a4d8f29cad">More...</a><br /></td></tr>
 <tr class="separator:ae27a09d1e3fb0a30ce9545a4d8f29cad inherit pub_methods_class_abstract_integrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a864fe7dc9aa1ff0b36da0b8f361a5b69 inherit pub_methods_class_abstract_integrator"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_integrator.html#a864fe7dc9aa1ff0b36da0b8f361a5b69">GetUpperLimit</a> () const</td></tr>
+<tr class="memdesc:a864fe7dc9aa1ff0b36da0b8f361a5b69 inherit pub_methods_class_abstract_integrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for getting the upper limit of integral.  <a href="class_abstract_integrator.html#a864fe7dc9aa1ff0b36da0b8f361a5b69">More...</a><br /></td></tr>
 <tr class="separator:a864fe7dc9aa1ff0b36da0b8f361a5b69 inherit pub_methods_class_abstract_integrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac58629ec6822b3beeefdd1323b627704 inherit pub_methods_class_abstract_integrator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_integrator.html#ac58629ec6822b3beeefdd1323b627704">GetSamplingNumber</a> () const</td></tr>
+<tr class="memdesc:ac58629ec6822b3beeefdd1323b627704 inherit pub_methods_class_abstract_integrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for getting the number of sampling.  <a href="class_abstract_integrator.html#ac58629ec6822b3beeefdd1323b627704">More...</a><br /></td></tr>
 <tr class="separator:ac58629ec6822b3beeefdd1323b627704 inherit pub_methods_class_abstract_integrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f709ab302dfe70b5f0f2ce80456fcdb inherit pub_methods_class_abstract_integrator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_integrator.html#a7f709ab302dfe70b5f0f2ce80456fcdb">GetMoment</a> () const</td></tr>
+<tr class="memdesc:a7f709ab302dfe70b5f0f2ce80456fcdb inherit pub_methods_class_abstract_integrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for getting the moment.  <a href="class_abstract_integrator.html#a7f709ab302dfe70b5f0f2ce80456fcdb">More...</a><br /></td></tr>
 <tr class="separator:a7f709ab302dfe70b5f0f2ce80456fcdb inherit pub_methods_class_abstract_integrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6262731b81f3ad7e984ba354b4601356 inherit pub_methods_class_abstract_integrator"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_integrator.html#a6262731b81f3ad7e984ba354b4601356">FunctionValue</a> (double x) const</td></tr>
 <tr class="memdesc:a6262731b81f3ad7e984ba354b4601356 inherit pub_methods_class_abstract_integrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the value of function at the given input value (x)  <a href="class_abstract_integrator.html#a6262731b81f3ad7e984ba354b4601356">More...</a><br /></td></tr>
 <tr class="separator:a6262731b81f3ad7e984ba354b4601356 inherit pub_methods_class_abstract_integrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class integrates a function using Metropolis sampling Brief description continued. </p>
+<div class="textblock"><p>This class integrates a function using Metropolis sampling. </p>
 <p>In this method user must provide a strictly positive weight function on domain of integration. If the weight function is normalized, this method will perform integration and evaluates the error. If it is not the case, weight function will be normalized by integrating weight function on domain using Uniform Sampling class. The evaluation of error will consider the probable error in normalizing the weight function. The output is an array "ans" such that ans[0] is the integral answer and ans[1] is the estimated error. </p>
 
-<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8h_source.html#l00019">19</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8h_source.html">MonteCarlo_MetropolisAlgorithm.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8h_source.html#l00016">16</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8h_source.html">MonteCarlo_MetropolisAlgorithm.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a80995ad029b056ca675c751c247426a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80995ad029b056ca675c751c247426a5">&#9670;&nbsp;</a></span>MonteCarlo_MetropolisAlgorithm()</h2>
@@ -161,7 +165,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00012">12</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00013">13</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
 
 </div>
 </div>
@@ -182,7 +186,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00013">13</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00014">14</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
 
 </div>
 </div>
@@ -210,12 +214,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>pure virtual method </p>
-<p>in the derived classes, this method is overridden for implementing numerical algorithms </p>
+<p>Integrating using Metropolis Algorithm. </p>
 
 <p>Implements <a class="el" href="class_abstract_integrator.html#a073d8f87239f732b3d2832070caa3b17">AbstractIntegrator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00030">30</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00032">32</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +238,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>flag</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>flag</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -245,9 +248,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A method for setting the weight function by the user, flag=1 if the function is normalized. </p>
+<p>A method for setting the weight function by the user, flag=true if the function is normalized. </p>
+<p>the default Flag has been set false, so if the user doesn't know whether his weight function is normalized or not, he can leave the second argument </p>
 
-<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00017">17</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00018">18</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
 
 </div>
 </div>
@@ -269,7 +273,7 @@ Public Member Functions</h2></td></tr>
 
 <p>This method returns the value of weight function at the given input value (x) </p>
 
-<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00024">24</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html#l00025">25</a> of file <a class="el" href="_monte_carlo___metropolis_algorithm_8cpp_source.html">MonteCarlo_MetropolisAlgorithm.cpp</a>.</p>
 
 </div>
 </div>

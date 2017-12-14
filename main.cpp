@@ -21,14 +21,14 @@ int main() {
     MonteCarlo_UniformSampling I;
     I.SetLowerLimit(0);
     I.SetUpperLimit(1);
-    I.SetSamplingNumber(10000);
+    I.SetSamplingNumber(80000);
     I.SetFunction(f);
     //I.SetMoment(1);
 
     MonteCarlo_MetropolisAlgorithm J;
     J.SetLowerLimit(0);
     J.SetUpperLimit(1);
-    J.SetSamplingNumber(10000);
+    J.SetSamplingNumber(80000);
     J.SetFunction(f);
     J.SetWeight(w,true);
     //J.SetMoment(1);
