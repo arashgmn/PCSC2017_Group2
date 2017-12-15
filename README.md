@@ -2,7 +2,7 @@
 
 Inside PCSC2017_Group2/tests/ there are four CPP files, each evaluating one of the features of Monte Carlo integration:
 
-1. Test: Evaluates three integral numerically with both methods (look at list of tests).
+1. Test: Evaluates three integral numerically with both methods.
 2. StatisticalMomenst: Evaluates statistical moments of Gaussian distribution up to power 8 using uniform sampling.
 3. CentralLimitTheory: Integrates the same function many time to find the distribution of answers. 
 4. Errors: Evaluates the true and estimated error for a specific function.
@@ -29,3 +29,6 @@ Then user have to specify the upper and lower limit of integration, the moment (
 
 Finally, the method below, will return an array which contains the value of the integral in the first element and the evaluated error in the second one:
 1. Integrator(): computes integral with respective method
+
+
+One can find a good example in the main() file.
