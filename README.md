@@ -31,4 +31,4 @@ Finally, the method below, will return an array which contains the value of the 
 1. Integrator(): computes integral with respective method
 
 
-One can find a good example in the main() file.
+One can find a good example in the main() file. For more details, look at read_me.pdf.
