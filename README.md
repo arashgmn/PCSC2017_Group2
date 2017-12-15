@@ -14,7 +14,7 @@ For running the program, one should first specify the followings outside of the 
 2. The strictly positive weight function, if Metropolis method is chosen, otherwise not needed.
 
 Next step is to specify the method of integration by creating objects of the following classes inside the main block:
-3. MonteCarlo_UniformSampling
+1. MonteCarlo_UniformSampling
 4. MonteCarlo_MetropolisAlgorithm
 
 After that, user have to link the function and its weight to those defined outside the main by using the following methods:
