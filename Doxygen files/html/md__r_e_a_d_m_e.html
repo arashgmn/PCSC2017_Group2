@@ -62,47 +62,36 @@ $(function() {
 <div class="title">PCSC2017_Group2 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Monte Carlo In this file we have provided a brief instruction for the program, its compilation, features, limitations and the probable to-dos to eliminate them or extend the program. Introduction to Monte Carlo algorithm Monte Carlo algorithm for integration is simply sampling over the domain of integration to estimate the mean value of the function. There are two main procedures to this problem: one is to uniformly choose samples in domain (uniform sampling) and the other is to choose the samples with respect to a weight function that have similar distribution to original function, so at the end, those parts have more contribution in the integral are considered more (importance sampling). Compiling test suite Inside PCSC2017_Group2/tests/ there are four CPP files, each evaluating one of the features of Monte Carlo integration. • Test: Evaluates three integral numerically with both methods. • StatisticalMomenst: Evaluates statistical moments of Gaussian distribution up to power 10 using uniform sampling. The answers will be written in a file. Figure 1 shows the comparison between true and computed values. • CentralLimitTheory: Integrates the same function many time to find the distribution of answers. Figure 2 Shows the distribution of N=? runs and the fitted normal distribution. • Errors: Evaluates the true and estimated error for a specific function. Program flow For running the program, one should first specify the followings outside of the main block:</p><ol type="1">
-<li>function that should be integrated. The function must get a double and returns a double</li>
-<li>the non-negative weight function (if Metropolis method is chosen). Next step is to specify the method of integration by creating objects of the following classes inside the main block:</li>
-</ol>
+<div class="textblock"><p>Inside PCSC2017_Group2/tests/ there are four CPP files, each evaluating one of the features of Monte Carlo integration:</p>
 <ol type="1">
+<li>Test: Evaluates three integral numerically with both methods.</li>
+<li>StatisticalMomenst: Evaluates statistical moments of Gaussian distribution up to power 8 using uniform sampling.</li>
+<li>CentralLimitTheory: Integrates the same function many time to find the distribution of answers.</li>
+<li>Errors: Evaluates the true and estimated error for a specific function.</li>
+</ol>
+<h1>Program flow</h1>
+<p>For running the program, one should first specify the followings outside of the main block:</p><ol type="1">
+<li>The function that should be integrated. It must get a double and returns a double</li>
+<li>The strictly positive weight function, if Metropolis method is chosen, otherwise not needed.</li>
+</ol>
+<p>Next step is to specify the method of integration by creating objects of the following classes inside the main block:</p><ol type="1">
 <li><a class="el" href="class_monte_carlo___uniform_sampling.html" title="This class integrates a function using uniform sampling. ">MonteCarlo_UniformSampling</a></li>
-<li><a class="el" href="class_monte_carlo___metropolis_algorithm.html" title="This class integrates a function using Metropolis sampling. ">MonteCarlo_MetropolisAlgorithm</a> After that, user have to link the function and its weight to those defined outside the main by using the following methods:</li>
+<li><a class="el" href="class_monte_carlo___metropolis_algorithm.html" title="This class integrates a function using Metropolis sampling. ">MonteCarlo_MetropolisAlgorithm</a></li>
 </ol>
-<ol type="1">
-<li>SetFunction(*double): The argument is the function defined outside of main</li>
-<li>SetWeight (*double,bool) : The first argument is the function defined outside of main. The second argument is a flag indicating that if weight function is normalized (true) or not (false). If user is not sure about normalization, he/she can omit the second argument. By default, it is set to false to normalize the weight. Yet it is better to feed this method with normalized weight to avoid normalization error. Next step is specifying the upper and lower limit of integration. the moment (if it is desired), and the number of sampling by using the following methods:</li>
+<p>After that, user have to link the function and its weight to those defined outside the main by using the following methods:</p><ol type="1">
+<li>SetFunction(double (*f)(double x)): The argument is the function defined outside of main</li>
+<li>SetWeight(double (*w)(double x), bool flag ) : The first argument is the function defined outside of main. The second argument is a flag indicating that if weight function is normalized (true) or not (false). If user is not sure about normalization, he/she can omit the second argument. By default, it is set to false to normalize the weight. Yet it is better to feed this method with normalized weight to avoid normalization error.</li>
 </ol>
-<ol type="1">
-<li>SetLowerLimit (double): Specifies lower limit.</li>
-<li>SetUpperLimit (double): Specifies upper limit.</li>
-<li>SetMoment (int): Specifies the moment number.</li>
-<li>SetSamplingNumber (int): Specifies number of samples. Finally, the method below, will return an array which contains the value of the integral in the first element and the evaluated error in the second one:</li>
+<p>Then user have to specify the upper and lower limit of integration, the moment (if it is desired), and the number of sampling by using the following methods:</p><ol type="1">
+<li>SetLowerLimit(const double a): Specifies lower limit.</li>
+<li>SetUpperLimit(const double b): Specifies upper limit.</li>
+<li>SetMoment(const int m): Specifies the moment number.</li>
+<li>SetSamplingNumber(const int N): Specifies number of samples.</li>
 </ol>
-<ol type="1">
-<li>Integrator(): Computes integral with respective method List of features</li>
+<p>Finally, the method below, will return an array which contains the value of the integral in the first element and the evaluated error in the second one:</p><ol type="1">
+<li>Integrator(): computes integral with respective method</li>
 </ol>
-<ol type="1">
-<li>Integrating R to R functions inside a bounded domain using Uniform Sampling and Importance Sampling (using Metropolis procedure)</li>
-<li>Computing different statistical moments of a function (integer or non-integer)</li>
-<li>Normalizing weight function if needed only by taking a flag</li>
-<li>Estimating error of integration</li>
-<li>Being able to increase the accuracy by taking more samples as user's wish Integration in unbounded domain (should be used with caution, not recommended for all functions)</li>
-<li>List of tests We have tested program under the following benchmarks:</li>
-</ol>
-<ol type="1">
-<li>Computing Pi=3.14159...</li>
-<li>Computing normal distribution integral</li>
-<li>Computing gamma-function for z=4</li>
-<li>Evaluating error and comparing them with true error for all integrals above</li>
-<li>Computing even-moments of normal distribution up to 10 To-dos and prospective The program can be extended to cover the following objectives:</li>
-</ol>
-<ol type="1">
-<li>Integrals from R^n to R</li>
-<li>Integral in unbounded domain. {We've already provided such feature. Yet, we decided to comment it for the following reason. Using Monte Carlo algorithm on unbounded domain, is only possible with importance sampling (Metropolis) method. For using Metropolis, one should provide a suitable weight function considering the mathematical behavior of the original function. Also it is crucial to choose a good starting point to be able to span most of the subsets that contribute the most in the value of integral. These considerations cannot be implemented without pre-knowledge about shape of the function. In most cases, though, considering sufficient large upper and lower limit will give a reasonable answer.}</li>
-<li>Active (self-corrector) step-size for Metropolis method </li>
-</ol>
+<p>One can find a good example in the <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a> file. For more details, look at read_me.pdf. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

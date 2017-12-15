@@ -13,7 +13,7 @@ double f(double x)
 
 double w(double x)
 {
-    return (4-2*x)/3;;
+    return (4-2*x)/3;
 }
 
 int main() {

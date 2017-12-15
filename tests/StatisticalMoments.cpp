@@ -14,8 +14,8 @@ int main(){
 
     ofstream USfile;
     ofstream MPfile;
-    USfile.open ("StatMoment_file_US.txt",std::ios::app);
-    MPfile.open ("StatMoment_file_US.txt",std::ios::app);
+    USfile.open ("StatMoment_file_US.txt",std::ios::out);
+    MPfile.open ("StatMoment_file_MP.txt",std::ios::out);
 
     USfile<< "m    Integral    Error\n";
     MPfile<< "m    Integral    Error\n";
@@ -24,25 +24,25 @@ int main(){
     MonteCarlo_MetropolisAlgorithm J;
     I.SetLowerLimit(-10);
     I.SetUpperLimit(10);
-    I.SetSamplingNumber(10000);
+    I.SetSamplingNumber(90000);
     I.SetFunction(f);
 
     J.SetLowerLimit(-10);
     J.SetUpperLimit(10);
-    J.SetSamplingNumber(10000);
+    J.SetSamplingNumber(90000);
     J.SetFunction(f);
     J.SetWeight(w,true);
 
-    for (int m=0;m<=10;m+=2){
+    for (int m=0;m<=8;m+=1){
 
         I.SetMoment(m);
         J.SetMoment(m);
 
-        MP =J.Integrator();
-        US=I.Integrator();
+        MP = J.Integrator();
+        US = I.Integrator();
 
-        USfile<<m<<"\t"<<US[0]<<"\t"<<US[1]<<"\t"<<US[0]-ExactValue<<"\n";
-        MPfile<<m<<"\t"<<MP[0]<<"\t"<<MP[1]<<"\t"<<MP[0]-ExactValue<<"\n";
+        USfile<<m<<"\t"<<US[0]<<"\t"<<US[1]<<"\n";
+        MPfile<<m<<"\t"<<MP[0]<<"\t"<<MP[1]<<"\n";
     }
 
     USfile.close();

@@ -20,7 +20,7 @@ public:
     ~MonteCarlo_MetropolisAlgorithm(); //!< Destructor
 
     // Set Methods
-    void SetWeight(double (*w)(double x), bool flag ); //!< A method for setting the weight function by the user, flag=true if the function is normalized.
+    void SetWeight(double (*w)(double x), bool flag = false); //!< A method for setting the weight function by the user, flag=true if the function is normalized.
     /*!< the default Flag has been set false, so if the user doesn't know whether his weight function is normalized or not, he can leave the second argument*/
 
     // other Methods

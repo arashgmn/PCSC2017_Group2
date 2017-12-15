@@ -15,7 +15,7 @@ MonteCarlo_MetropolisAlgorithm::~MonteCarlo_MetropolisAlgorithm(){};
 
 // Set Methods
 
-void MonteCarlo_MetropolisAlgorithm::SetWeight(double (*w)(double x),bool flag = false) {
+void MonteCarlo_MetropolisAlgorithm::SetWeight(double (*w)(double x),bool flag) {
     Weight = w;
     Flag = flag;
 }
@@ -66,7 +66,6 @@ double* MonteCarlo_MetropolisAlgorithm::Integrator() {
         Integral_W = ans_W[0];     //Integral of W
         Err_W = ans_W[1];          //Error in normalizing
     }
-
 
     // start point
     x_new = a + (b - a) * distribution(generator);                          // a random variable in domain

@@ -13,8 +13,8 @@ int main(){
     double *MP,*US;
     ofstream USfile;
     ofstream MPfile;
-    USfile.open ("Error_file_US.txt",std::ios::app);
-    MPfile.open ("Error_file_MP.txt",std::ios::app);
+    USfile.open ("Error_file_US.txt",std::ios::out);
+    MPfile.open ("Error_file_MP.txt",std::ios::out);
 
     USfile<<"#N    Integral    Error   True Error\n";
     MPfile<<"#N    Integral    Error   True Error\n";

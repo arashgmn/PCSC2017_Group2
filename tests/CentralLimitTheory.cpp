@@ -26,7 +26,7 @@ int main(){
     double *US1,*US2;
     ofstream CL;
 
-    CL.open ("Central_Limit.txt",std::ios::app);
+    CL.open ("Central_Limit.txt",std::ios::out);
     CL.precision(8);
 
     mu1=0;
