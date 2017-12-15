@@ -14,18 +14,18 @@ For running the program, one should first specify the followings outside of the 
 2. The strictly positive weight function, if Metropolis method is chosen, otherwise not needed.
 
 Next step is to specify the method of integration by creating objects of the following classes inside the main block:
-3. MonteCarlo_UniformSampling
-4. MonteCarlo_MetropolisAlgorithm
+1. MonteCarlo_UniformSampling
+2. MonteCarlo_MetropolisAlgorithm
 
 After that, user have to link the function and its weight to those defined outside the main by using the following methods:
-3. SetFunction(double (*f)(double x)): The argument is the function defined outside of main
-6. SetWeight(double (*w)(double x), bool flag ) : The first argument is the function defined outside of main. The second argument is a flag indicating that if weight function is normalized (true) or not (false). If user is not sure about normalization, he/she can omit the second argument. By default, it is set to false to normalize the weight. Yet it is better to feed this method with normalized weight to avoid normalization error.
+1. SetFunction(double (*f)(double x)): The argument is the function defined outside of main
+2. SetWeight(double (*w)(double x), bool flag ) : The first argument is the function defined outside of main. The second argument is a flag indicating that if weight function is normalized (true) or not (false). If user is not sure about normalization, he/she can omit the second argument. By default, it is set to false to normalize the weight. Yet it is better to feed this method with normalized weight to avoid normalization error.
 
 Then user have to specify the upper and lower limit of integration, the moment (if it is desired), and the number of sampling by using the following methods:
-7. SetLowerLimit(const double a): Specifies lower limit.
-8. SetUpperLimit(const double b): Specifies upper limit.
-9. SetMoment(const int m): Specifies the moment number.
-10. SetSamplingNumber(const int N): Specifies number of samples.
+1. SetLowerLimit(const double a): Specifies lower limit.
+2. SetUpperLimit(const double b): Specifies upper limit.
+3. SetMoment(const int m): Specifies the moment number.
+4. SetSamplingNumber(const int N): Specifies number of samples.
 
 Finally, the method below, will return an array which contains the value of the integral in the first element and the evaluated error in the second one:
-11. Integrator(): computes integral with respective method
+1. Integrator(): computes integral with respective method
